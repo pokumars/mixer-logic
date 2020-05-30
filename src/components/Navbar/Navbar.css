@@ -1,0 +1,24 @@
+.navbar{
+  background-color: #5CDB95;
+  max-width: 1200;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  border: oldlace 3px solid;
+}
+
+.logo a{
+text-decoration: none;
+color: #05386B;
+font-size: 24px;
+}
+.logo a img{
+  height: 25px;
+}
+button{
+  background-color: #05386B;
+  color: white;
+  border: none;
+  padding: 1px 10px;
+  border-radius: 5px;
+}
