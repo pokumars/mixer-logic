@@ -5,20 +5,26 @@
   display: flex;
   justify-content: space-between;
   border: oldlace 3px solid;
+  align-items: center;
 }
 
-.logo a{
+.logo-container a{
 text-decoration: none;
 color: #05386B;
 font-size: 24px;
 }
-.logo a img{
+.logo{
   height: 25px;
+  background-color: white;
 }
-button{
+div button{
   background-color: #05386B;
   color: white;
   border: none;
-  padding: 1px 10px;
-  border-radius: 5px;
+  padding: 6px 10px;
+  border-radius: 5px; 
+}
+
+.navbar-buttons{
+  display: none;
 }

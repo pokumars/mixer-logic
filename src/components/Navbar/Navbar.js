@@ -4,13 +4,15 @@ import './Navbar.css'
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="logo">
+      <div className="logo-container">
         <a href="/">
-          <img src={require('../../graphics/cocktail-blue.svg')} alt="cocktail glass"/>
+          <img className="logo" data-testid="logo" src={require('../../graphics/cocktail-blue.svg')} alt="cocktail glass"/>
           <span><b>mixer logic</b> </span>
         </a>
       </div>
-      <button type="button">Sign In</button>
+      <div className="navbar-buttons">
+        <button type="button">Sign In</button>
+      </div>
       
     </div>
   )
