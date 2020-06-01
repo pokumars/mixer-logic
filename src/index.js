@@ -4,11 +4,15 @@ import './index.css';
 import App from './components/App/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'
-import filterReducer from './reducers/filter'
+import searchReducer from './reducers/searchReducer'
 
 
-const store = createStore(filterReducer)
+const store = createStore(searchReducer)
 
+store.subscribe(() => {
+  const storeNow = store.getState()
+  console.log(storeNow)
+})
 
 ReactDOM.render(
   <Provider store={store}>

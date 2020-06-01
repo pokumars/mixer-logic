@@ -1,17 +1,19 @@
 import React from 'react'
 import './Navbar.css'
+import Button from '../Button/Button'
 
 export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-container">
         <a href="/">
-          <img className="logo" data-testid="logo" src={require('../../graphics/cocktail-blue.svg')} alt="cocktail glass"/>
+          <img className="logo" data-testid="logo" alt="cocktail glass"
+           src={require('../../graphics/cocktail-blue.svg')} />
           <span><b>mixer logic</b> </span>
         </a>
       </div>
       <div className="navbar-buttons">
-        <button type="button">Sign In</button>
+        <Button btnText="Sign In" btnColor="#05386B"  handleClick={()=> console.log(1)}/>
       </div>
       
     </div>
