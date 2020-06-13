@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import Button from '../Button/Button'
-import './SearchBar.css'
-import { useDispatch } from 'react-redux'
-import { changeCriteria, performSearch, changeQuery } from '../../reducers/searchReducer'
+import React, { useState } from 'react';
+import Button from '../Button/Button';
+import './SearchBar.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeCriteria, changeQuery } from '../../reducers/searchReducer';
+import { findDrinksByName } from '../../reducers/drinksReducer';
+
 
 
 export const SearchBar = () => {
@@ -22,12 +24,14 @@ export const SearchBar = () => {
     setQuery(event.target.value)
     console.log(query)
   }
-
+  
   const handleSearchSubmit= (event)=> {
     event.preventDefault()
     //change the query object then perform the search
     dispatch(changeQuery(query))
+    dispatch(findDrinksByName(query))
   }
+
 
 
 

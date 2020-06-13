@@ -6,7 +6,7 @@ const CHANGE_QUERY= "CHANGE_QUERY"
 const CHANGE_CRITERIA= "CHANGE_CRITERIA"
 //const PERFOM_SEARCH= "PERFOM_SEARCH"
 
-const filterReducer = (state=searchState, action) => {
+const searchReducer = (state=searchState, action) => {
   switch (action.type) {
     case CHANGE_QUERY:
       const changedStateQuery = {
@@ -18,7 +18,7 @@ const filterReducer = (state=searchState, action) => {
     case CHANGE_CRITERIA:
       const changedStateCriteria = {
         ...state,
-        query: action.criteria
+        criteria: action.criteria
       }
        
       return changedStateCriteria;
@@ -53,4 +53,4 @@ export const performSearch = searchObj => {
   }
 } */
 
-export default filterReducer;
+export default searchReducer;
