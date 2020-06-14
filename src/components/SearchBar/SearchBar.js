@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './SearchBar.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeCriteria, changeQuery } from '../../reducers/searchReducer';
 import { findDrinksByName, findDrinksByMethod } from '../../reducers/drinksReducer';
 
 
@@ -12,7 +11,7 @@ export const SearchBar = () => {
   //TODO: If i need to use this component in the user's page, I can pass in the necessary functions as 
   //props so I can re-use it on homepage and in user page.
   const [query, setQuery] = useState('')
-  const [criteria, setCriteria] = useState('')
+  const [criteria, setCriteria] = useState('method')
   const dispatch = useDispatch()
   
   const performSearchByCriteria = () => {
@@ -35,7 +34,6 @@ export const SearchBar = () => {
     console.log(value)
   }
   
-  
   const handleQueryChange = (event)=> {
     setQuery(event.target.value)
     console.log(event.target.value)
@@ -47,11 +45,8 @@ export const SearchBar = () => {
 
     //search is done based on what the criteria is  atm
     performSearchByCriteria()
-    console.log('query and criteria atm ----->',{query, criteria})
+    console.log('query and criteria atm ----->', criteria, query)
   }
-
-
-
 
   return (
     <div className="search-bar">
@@ -74,11 +69,3 @@ export const SearchBar = () => {
     </div>
   )
 }
-
-/**      <form className="search" onSubmit={handleSearchSubmit}>
-        <input value={query} id="searchInput" onChange={handleQueryChange}
-        placeholder="Search..."/>
-        <Button btnText="Search" btnColor="#05386B"
-          handleClick={() => console.log(query)}
-          btnType="submit" />
-      </form> */

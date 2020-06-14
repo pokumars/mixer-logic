@@ -5,8 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 const reducer = combineReducers({
-  drinks: drinksReducer,
-  search: searchReducer
+  drinks: drinksReducer
 })
 
 const store = createStore(

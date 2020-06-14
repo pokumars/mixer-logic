@@ -1,3 +1,14 @@
+//Appears that i dont need this reducer anymore for now
+
+
+
+
+
+
+
+
+
+
 const searchState = {
   query: "",
   criteria: "name"
