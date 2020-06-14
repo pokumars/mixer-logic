@@ -32,5 +32,16 @@ export const findDrinksByName = (searchText) => {
     data: foundDrinks
   }
 }
+export const findDrinksByMethod = (searchText) => {
+  //const foundDrinks = drinks.filter(currDrink => currDrink.method.toLowerCase().indexOf(searchText.toLowerCase())!== -1)
+
+  console.log("finding by method")
+  //console.log(foundDrinks)
+  return {
+    type:FIND_BY_METHOD,
+    data: [1, 2]
+  }
+}
+
 
 export default drinksReducer;

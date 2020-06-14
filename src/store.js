@@ -1,6 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import drinksReducer from './reducers/drinksReducer';
 import searchReducer from './reducers/searchReducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 const reducer = combineReducers({
@@ -9,7 +10,8 @@ const reducer = combineReducers({
 })
 
 const store = createStore(
-  reducer
+  reducer,
+  composeWithDevTools()
 )
 
 export default store;
