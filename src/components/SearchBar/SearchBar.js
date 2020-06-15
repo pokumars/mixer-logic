@@ -24,7 +24,7 @@ export const SearchBar = () => {
         break;
     
       default:
-        dispatch(findDrinksByName(query));
+        dispatch( (query));
     }
   }
 

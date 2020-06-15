@@ -32,7 +32,7 @@ const drinks = [
         ["vodka",4, "cl"],
         ["dry vermouth",1, "dash"]
       ],
-      imageUrl:"vodkaMartini",
+      imageUrl:"vodkaMartini.jpg",
       glass: "cocktail",
       method: ["stir"],
       garnish: ["olives"," lemon twist"],
@@ -49,7 +49,7 @@ const drinks = [
   
     },
     {
-      name: "Bloody mary",
+      name: "Bloody Mary",
       ingredients: [
         ["vodka", 2, "cl"],
         ["lime vodka", 2, "cl"],
@@ -59,7 +59,7 @@ const drinks = [
         ["tabasco/hot sauce ", 3, "drops"],
         ["worcestershire sauce", 2, "dashes"]
       ],
-      imageUrl:"bloodyMaryCocktail",
+      imageUrl:"bloodyMaryCocktail.jpg",
       glass: "On The Rocks",
       method: ["stir"],
       garnish: ["celery stalk", "cucumber"],
@@ -82,7 +82,7 @@ const drinks = [
         ["fresh ginger", null, null],
         ["chili pepper", null, null]
       ],
-      imageUrl:"spicyMule",
+      imageUrl:"spicyMule.jpg",
       glass: "highball",
       method: ["muddle","build"],
       garnish: ["cucumber stick","lime wedge"],
@@ -103,7 +103,7 @@ const drinks = [
         ["grapefruit juice", 6, "cl"],
         ["slice of mango", null, null],
       ],
-      imageUrl:"mangoBreeze",
+      imageUrl:"mangoBreeze.jpg",
       glass: "highball",
       method: ["build"],
       garnish: ["slice of mango"],
@@ -127,7 +127,7 @@ const drinks = [
         ["salt and pepper", null, null],
         ["celery", null, null]
       ],
-      imageUrl:"miniMary",
+      imageUrl:"miniMary.jpg",
       glass: "shot",
       method: ["shake"],
       garnish: ["cherry tomato","celery stalk"],
@@ -149,7 +149,7 @@ const drinks = [
         ["sugar", null, null],
         ["pink grapefruit", null, "slice"]
       ],
-      imageUrl:"miniSeaBreeze",
+      imageUrl:"miniSeaBreeze.jpg",
       glass: "shot",
       method: ["build"],
       garnish: ["pink grapefruit","sugar"],
@@ -172,7 +172,7 @@ const drinks = [
         ["sugar", null, null],
         ["cinnamon", null, null]
       ],
-      imageUrl:"cinnamini",
+      imageUrl:"cinnamini.jpg",
       glass: "shot",
       method: ["shake"],
       garnish: ["apple wedge","cinnamon", "sugar"],
@@ -193,7 +193,7 @@ const drinks = [
         ["sugar", 2, "tsp"],
         ["crushed ice", null, null]
       ],
-      imageUrl:"caipiroska",
+      imageUrl:"caipiroska.jpg",
       glass: "on the rocks",
       method: ["muddle","stir"],
       garnish: ["caipiroska spoon"],
@@ -217,7 +217,7 @@ const drinks = [
         ["wasabi paste", 1, "pinch"],
         ["crushed ice", null, null]
       ],
-      imageUrl:"orientalCaipiroska",
+      imageUrl:"orientalCaipiroska.jpg",
       glass: "on the rocks",
       method: ["muddle","stir"],
       garnish: ["caipiroska spoon"],
@@ -241,7 +241,7 @@ const drinks = [
         ["pink grapefruit wedges", null, null],
         ["crushed ice", null, null]
       ],
-      imageUrl:"grapefruitCaipiroska",
+      imageUrl:"grapefruitCaipiroska.jpg",
       glass: "on the rocks",
       method: ["muddle","stir"],
       garnish: ["pink grapefruit wedge"],
@@ -262,7 +262,7 @@ const drinks = [
         ["simple syrup (1 part sugar mixed with 1 part hot water)", 1, "cl"],
         ["espresso", 4, "cl"]
       ],
-      imageUrl:"espressoMartini",
+      imageUrl:"espressoMartini.jpg",
       glass: "cocktail",
       method: ["shake"],
       garnish: ["coffee beans"],
@@ -284,7 +284,7 @@ const drinks = [
         ["rosemary sprig", null, null],
         ["lemon twist", null, null]
       ],
-      imageUrl:"archipelago",
+      imageUrl:"archipelago.jpg",
       glass: "highball",
       method: ["build"],
       garnish: ["lemon twist","herbs"],
@@ -309,7 +309,7 @@ const drinks = [
         ["pineapple leaf", null, null],
         ["lime wedge", null, null]
       ],
-      imageUrl:"tropicalTouch",
+      imageUrl:"tropicalTouch.jpg",
       glass: "cocktail or coupe",
       method: ["stir"],
       garnish: ["pineapple leaf","lime wedge"],
@@ -332,7 +332,7 @@ const drinks = [
         ["lemon-lime soda", 8, "cl"],
         ["ice", null, null]
       ],
-      imageUrl:"coconutCrush",
+      imageUrl:"coconutCrush.jpg",
       glass: "hihgball",
       method: ["shake","build"],
       garnish: ["pineapple wedge"],
@@ -355,7 +355,7 @@ const drinks = [
         ["pineapple wedges", 4, null],
         ["crushed ice", null, null]
       ],
-      imageUrl:"tropicalCaipiroska",
+      imageUrl:"tropicalCaipiroska.jpg",
       glass: "on the rocks",
       method: ["muddle","stir"],
       garnish: ["cilantro","pineapple slice"],
@@ -376,7 +376,7 @@ const drinks = [
         ["tonic water", 12, "cl"],
         ["lime", 1, null]
       ],
-      imageUrl:"ginAndTonic",
+      imageUrl:"ginAndTonic.jpg",
       glass: "highball",
       method: ["build"],
       garnish: ["lime"],
@@ -397,7 +397,7 @@ const drinks = [
         ["ice", null, null],
         ["lime twist", null, null]
       ],
-      imageUrl:"limeCola",
+      imageUrl:"limeCola.jpg",
       glass: "cocktail or highball",
       method: ["build"],
       garnish: ["lime twist"],
@@ -420,7 +420,7 @@ const drinks = [
         ["sugar", null, null],
         ["cinnamon", null, null]
       ],
-      imageUrl:"applePie",
+      imageUrl:"applePie.jpg",
       glass: "shot",
       method: ["stir","build"],
       garnish: ["apple slice","cinnamon"],
@@ -443,7 +443,7 @@ const drinks = [
         ["chili", null, null],
         ["chocolate chips", null, null]
       ],
-      imageUrl:"spicyMango",
+      imageUrl:"spicyMango.jpg",
       glass: "shot",
       method: ["shake"],
       garnish: ["chocolate chips","chili pepper"],
@@ -465,7 +465,7 @@ const drinks = [
         ["lime", null, "half"],
         ["ice", null, null]
       ],
-      imageUrl:"cubaLibre",
+      imageUrl:"cubaLibre.png",
       glass: "highball",
       method: ["build","stir"],
       garnish: ["lime wedge"],
@@ -488,7 +488,7 @@ const drinks = [
         ["pineapple wedge", null, null],
         ["ice", null, null]
       ],
-      imageUrl:"pinaColada",
+      imageUrl:"pinaColada.jpg",
       glass: "highball",
       method: ["blend"],
       garnish: ["pineapple wedge"],
@@ -513,7 +513,7 @@ const drinks = [
         ["simple syrup(1 part sugar mixed with 1 part hot water)", 15, "ml"],
         ["coke", null, null]
       ],
-      imageUrl:"longIslandIcedTea",
+      imageUrl:"longIslandIcedTea.jpg",
       glass: "highball",
       method: ["stir"],
       garnish: ["lemon slice"],
@@ -535,7 +535,7 @@ const drinks = [
         ["soda water", null, null],
         ["mint leaves", 6, null]      
       ],
-      imageUrl:"mojito",
+      imageUrl:"mojito.jpg",
       glass: "highball",
       method: ["muddle","shake"],
       garnish: ["mint leaf", "lime wheel"],
@@ -556,7 +556,7 @@ const drinks = [
         ["lime juice", 2, "cl"],
         ["sugar", 2, "tsp"]
       ],
-      imageUrl:"daiquiri",
+      imageUrl:"daiquiri.jpg",
       glass: "cocktail",
       method: ["stir","shake"],
       garnish: ["lime wheel", "nothing"],
@@ -578,7 +578,7 @@ const drinks = [
         ["maraschino liqueur (3 parts)", 1.5, "cl"],
         ["lime juice (3 parts) ", 1.5, "cl"]
       ],
-      imageUrl:"hemingwaySpecial",
+      imageUrl:"hemingwaySpecial.jpg",
       glass: "cocktail",
       method: ["shake",],
       garnish: ["lime wedge"],
@@ -598,7 +598,7 @@ const drinks = [
         ["triple sec", 2, "cl"],
         ["lime juice", 15, "ml"]
       ],
-      imageUrl:"margarita",
+      imageUrl:"margarita.jpg",
       glass: "cocktail",
       method: ["shake"],
       garnish: ["salted rim"],
@@ -623,7 +623,7 @@ const drinks = [
         ["maraschino cherry (optional)", 1, null],
         ["orange slice (optional)", 1, null],
       ],
-      imageUrl:"sexOnTheBeach",
+      imageUrl:"sexOnTheBeach.jpg",
       glass: "highball",
       method: ["shake"],
       garnish: ["orange slice ","maraschino cherry", "cocktail umbrella"],
@@ -642,7 +642,7 @@ const drinks = [
         ["orange juice", 7, "cl"],
         ["sparkling wine", 7, "cl"]
       ],
-      imageUrl:"mimosa",
+      imageUrl:"mimosa.jpg",
       glass: "champagne flute",
       method: ["stir"],
       garnish: ["orange wedge"],
@@ -663,7 +663,7 @@ const drinks = [
         ["maraschino cherry", 1, null],
         ["cola (optional)", null, null]
       ],
-      imageUrl:"blackRussian",
+      imageUrl:"blackRussian.jpg",
       glass: "On The Rocks",
       method: ["build","stir"],
       garnish: ["maraschino cherry"],
@@ -685,7 +685,7 @@ const drinks = [
         ["fresh cream (or milk)", 3, "cl"],
         ["ice", null, null]
       ],
-      imageUrl:"whiteRussian",
+      imageUrl:"whiteRussian.jpg",
       glass: "On The Rocks",
       method: ["build","stir"],
       garnish: [null],

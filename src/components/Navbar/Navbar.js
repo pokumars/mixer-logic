@@ -8,7 +8,7 @@ export const Navbar = () => {
       <div className="logo-container">
         <a href="/">
           <img className="logo" data-testid="logo" alt="cocktail glass"
-           src={require('../../graphics/cocktail-blue.svg')} />
+           src={require('../../graphics/cocktail-light-green.svg')} />
           <span><b>mixer logic</b> </span>
         </a>
       </div>

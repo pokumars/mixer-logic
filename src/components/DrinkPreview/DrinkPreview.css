@@ -1,0 +1,34 @@
+.drink-preview{
+background-color: #EDF5E1;
+width: 300px;
+padding: 15px;
+margin: 10px auto;
+border-radius: 10px;
+}
+.top-half{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.headers{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding-right: 5px;
+word-wrap: break-word;
+}
+.headers h1{
+  margin: 10px 0;
+}
+
+.bottom-half{
+
+}
+.drink-image{
+object-fit: contain;
+margin: 15px 0 0 0;
+}
+
+.bottom-half a{
+color: #05386B;
+}

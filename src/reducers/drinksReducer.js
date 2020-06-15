@@ -43,7 +43,7 @@ const deepSearch= (arr, criteria,query) =>{
   //@param criteria is the array in which to find the match
 
   const results= []
-  
+
   switch (criteria) {
     case FIND_BY_METHOD:
       
@@ -53,10 +53,10 @@ const deepSearch= (arr, criteria,query) =>{
         }
       });
       break;
-    case FIND_BY_ALCOHOL:
+    case FIND_BY_ALCOHOL://TODO: add this method
       console.log('searching by alcohol')
     break;
-  
+  //TODO: add find by ingredient
     default:
       return results;
   }
