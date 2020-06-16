@@ -11,7 +11,7 @@ const drinks = [
         ["ingredientName",4, "unit"],
         ["ingredientName",4, "unit"]
       ],
-      imageUrl:"vodkaMartini",
+      imageUrl:"vodkaMartini.jpg",
       glass: "glassType",
       method: ["method1","method2"],
       garnish: ["garnish1","garnish2"],

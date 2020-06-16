@@ -12,7 +12,7 @@ const DrinkPreview = ({drink}) => {
           <h1>{drink.name}</h1>
           <p><b>Ingredients</b></p>
         </div>
-        <img alt={drink.name} className="drink-image" height ="160"
+        <img alt={drink.name} className="drink-image" 
         src={require(`../../graphics/drinkImages/${drink.imageUrl}`)} />
       </div>
       <div className="bottom-half">

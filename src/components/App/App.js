@@ -10,11 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <SearchBar />
-      <DrinkPreview drink ={drinks[2]} />
-      <DrinkPreview drink ={drinks[29]} />
-      <DrinkPreview drink ={drinks[25]} />
-      <DrinkPreview drink ={drinks[23]} />
-      <DrinkPreview drink ={drinks[22]} />
+      {drinks.map(d => <DrinkPreview drink={d} key={d.name}/>)}
     </div>
   );
 }
