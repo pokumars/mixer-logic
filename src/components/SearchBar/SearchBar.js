@@ -11,7 +11,7 @@ export const SearchBar = () => {
   //TODO: If i need to use this component in the user's page, I can pass in the necessary functions as 
   //props so I can re-use it on homepage and in user page.
   const [query, setQuery] = useState('')
-  const [criteria, setCriteria] = useState('method')
+  const [criteria, setCriteria] = useState('name')
   const dispatch = useDispatch()
   
   const performSearchByCriteria = () => {
