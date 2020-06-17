@@ -1,0 +1,17 @@
+.footer{
+  background-color: #5CDB95;
+  max-width: 1200;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a, .footer {
+  color: #05386B;
+}

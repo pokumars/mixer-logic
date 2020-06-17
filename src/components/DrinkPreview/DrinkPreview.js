@@ -4,7 +4,7 @@ import { capitalise } from "../../util/helperFunctions";
 
 
 const DrinkPreview = ({drink}) => {
-  console.log(drink.name)
+  //console.log(drink.name)
   return (
     <div className="drink-preview">
       <div className="top-half">

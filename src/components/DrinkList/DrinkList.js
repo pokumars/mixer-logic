@@ -2,10 +2,11 @@ import React from 'react'
 import './DrinkList.css'
 import DrinkPreview from '../DrinkPreview/DrinkPreview'
 
-const DrinkList = ({ listOfDrinks }) => {
+const DrinkList = ({ listOfDrinks, showNumber= false }) => {
+  //if showNumber is false then you show number of results. It is false by default
   return (
     <div className="drink-list">
-      <div className="result-info"><span>{listOfDrinks.length} results found</span></div>
+      {showNumber === true && <div className="result-info"><span>{listOfDrinks.length} results found</span></div>}
       <div className="list">
         {listOfDrinks.map(d => <DrinkPreview drink={d} key={d.name} />)}
       </div>

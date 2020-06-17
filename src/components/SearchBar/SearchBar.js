@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './SearchBar.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { findDrinksByName, findDrinksByMethod } from '../../reducers/drinksReducer';
+import { findDrinksByName, findDrinksByMethod } from '../../reducers/searchReducer';
 
 
 

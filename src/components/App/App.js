@@ -2,16 +2,19 @@ import React from 'react';
 import './App.css';
 import { Navbar } from '../Navbar/Navbar';
 import { SearchBar } from '../SearchBar/SearchBar';
-import DrinkList from '../DrinkList/DrinkList';
 import { useSelector } from 'react-redux';
+import SearchResults from '../SearchResults/SearchResults';
+import FeaturedDrinks from '../FeaturedDrinks/FeaturedDrinks';
+import { Footer } from '../Footer/Footer';
 
 function App() {
-  const drinks = useSelector(state=> state.drinks)
+  const drinks = useSelector(state=> state.searchResults)
   return (
     <div className="App">
       <Navbar />
       <SearchBar />
-      <DrinkList listOfDrinks={drinks} />
+      <FeaturedDrinks allDrinks={drinks}/>
+      <Footer />
     </div>
   );
 }

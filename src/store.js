@@ -1,11 +1,11 @@
 import { createStore, combineReducers } from 'redux';
-import drinksReducer from './reducers/drinksReducer';
 import searchReducer from './reducers/searchReducer';
+import uselessReducer from './reducers/uselessReducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 const reducer = combineReducers({
-  drinks: drinksReducer
+  searchResults: searchReducer
 })
 
 const store = createStore(

@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import uselessReducer from './reducers/uselessReducer';
 import searchReducer from './reducers/searchReducer';
-import drinksReducer from './reducers/drinksReducer';
 import { render } from '@testing-library/react';
 import React from 'react'
 
@@ -14,7 +14,7 @@ import React from 'react'
 import '@testing-library/jest-dom/extend-expect';
 
 export const renderWithWrapper = children => {
-  const store = createStore(searchReducer)
+  const store = createStore(uselessReducer)
   return render(
     <Provider store={store}>
       {children}
