@@ -8,7 +8,7 @@ const FIND_BY_METHOD= "FIND_BY_METHOD";
 const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 const FIND_BY_ALCOHOL= "FIND_BY_ALCOHOL";
 
-const searchReducer = (state=drinks, action) => {
+const searchReducer = (state=[], action) => {
   switch (action.type) {
     case FIND_BY_NAME:
       
