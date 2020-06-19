@@ -7,8 +7,9 @@ const FIND_BY_NAME ="FIND_BY_NAME";
 const FIND_BY_METHOD= "FIND_BY_METHOD";
 const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 const FIND_BY_ALCOHOL= "FIND_BY_ALCOHOL";
+const noResults = "There were no results"
 
-const searchReducer = (state=[], action) => {
+const searchReducer = (state={res: [], empty:""}, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
       
@@ -22,15 +23,18 @@ const searchReducer = (state=[], action) => {
       return state;
   }
 }
+//if results ar e found do nothing else show results not found
+const emptyResultsText= (arr) => arr.length <1 ? noResults: ""
 
 //---------------------ACTION CREATORS-----------------
 export const findDrinksByName = (searchText) => {
   const foundDrinks = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(searchText.toLowerCase())!== -1)
+  const empty = emptyResultsText(foundDrinks)
 
   console.log(foundDrinks)
   return {
     type:FIND_BY_NAME,
-    data: foundDrinks
+    data: {res: foundDrinks, empty}
   }
 }
 
@@ -68,11 +72,12 @@ const deepSearch= (arr, criteria,query) =>{
 export const findDrinksByMethod = (searchText) => {
   //searches for full text && also search for partial text match
   const foundDrinks= deepSearch(drinks, FIND_BY_METHOD, searchText)
+  const empty = emptyResultsText(foundDrinks)
 
   console.log("finding by method")
   return {
     type:FIND_BY_METHOD,
-    data: foundDrinks
+    data: {res: foundDrinks, empty}
   }
 }
 
