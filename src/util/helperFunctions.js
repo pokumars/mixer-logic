@@ -4,4 +4,14 @@ const capitalise= (theString) => {//capitalises the first character of a string
   return theString.charAt(0).toUpperCase()+ theString.slice(1)
 }
 
-export { capitalise }
+const joinWithAnd= (stringArr) => {//join array of strings with commas and add "and" between last 2
+  if (stringArr.length < 1) return  "-"
+  else if (stringArr.length === 1) return  stringArr[0]
+  else if (stringArr.length > 1) {
+    const lastStr =stringArr.pop()
+    const result = stringArr.join(', ') + ' & '+ lastStr
+    return result
+  }
+}
+
+export { capitalise, joinWithAnd }

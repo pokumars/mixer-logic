@@ -7,33 +7,19 @@ import SearchResults from '../SearchResults/SearchResults';
 import FeaturedDrinks from '../FeaturedDrinks/FeaturedDrinks';
 import { Footer } from '../Footer/Footer';
 import { drinks } from "../../allDrinks";
+import Recipe from '../Recipe/Recipe';
 
 function App() {
-  /*all drinks should be separate from searchResults because 
-  featured takes from all drinks and search results are search results.*/
+  /*all drinks should be separate from searchResults because featured takes from all drinks and search results are search results.*/
   const searchRes = useSelector(state=> state.searchResults.res)
   const noResultsString = useSelector(state=> state.searchResults.empty)
-  //console.log(searchRes)
   const featured = drinks
-  
-
-  
+    
   return (
     <div  className="App">
       <div className="app-container">
         <Navbar />
-        <SearchBar />
-        {
-          searchRes.length < 1 && <h3>{noResultsString}</h3>
-        }
-        
-        {
-        /*FeaturedDrinks should disapear when there are search results available
-        i.e only show featured when search results are empty*/
-        
-        searchRes.length < 1 ? <FeaturedDrinks allDrinks={featured}/>: <SearchResults results={searchRes}/>
-
-        }
+        <Recipe drink={featured[2]} />
         
       </div>
       <Footer />

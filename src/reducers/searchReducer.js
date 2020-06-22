@@ -7,7 +7,7 @@ const FIND_BY_NAME ="FIND_BY_NAME";
 const FIND_BY_METHOD= "FIND_BY_METHOD";
 const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 const FIND_BY_ALCOHOL= "FIND_BY_ALCOHOL";
-const noResults = "There were no results"
+const noResults = "There were no results. Try something different"
 
 const searchReducer = (state={res: [], empty:""}, action) => {
   switch (action.type) {

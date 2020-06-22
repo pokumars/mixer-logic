@@ -9,7 +9,9 @@ const drinks = [
       name: "drinkName",
       ingredients: [
         ["ingredientName",4, "unit"],
-        ["ingredientName",4, "unit"]
+        ["ingredientName",4, "unit"],
+        ["fresh ginger", null, null],
+        ["salt", null, "pinch"],
       ],
       imageUrl:"vodkaMartini.jpg",
       glass: "glassType",
@@ -17,7 +19,7 @@ const drinks = [
       garnish: ["garnish1","garnish2"],
       categories: ["category1", "category2"],
       page: 1,
-      credits:[["entity1", "forWhat"], ["entity1", "forWhat"]],
+      credits:[["entity1", "forWhatImg"], ["entity1", "forWhat"]],
       steps: [
        "step1",
        "step2",
