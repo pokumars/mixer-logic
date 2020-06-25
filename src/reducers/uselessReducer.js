@@ -65,3 +65,21 @@ export const performSearch = searchObj => {
 } */
 
 export default uselessReducer;
+
+/*
+
+<SearchBar />
+{
+  /*when search results return empty and the noResultsString is no longer an empty string then give a no results message the "noResultsString.length > 1" is important because on start, search results
+  are also empty but no search has been done yet. The noResultsString only gets filled when in the searchReducer if it returns an empty array. that is our indicator for when 0 results is due to a search.
+  (searchRes.length < 1 && noResultsString.length > 1) && <h3 className="no-results">{noResultsString}</h3>
+}
+
+{
+/*FeaturedDrinks should disapear when there are search results available
+i.e only show featured when search results are empty
+
+searchRes.length < 1 ? <FeaturedDrinks allDrinks={featured}/>: <SearchResults results={searchRes}/>
+
+}
+*/
