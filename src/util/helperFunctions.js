@@ -13,5 +13,5 @@ const joinWithAnd= (stringArr) => {//join array of strings with commas and add "
     return result
   }
 }
-
-export { capitalise, joinWithAnd }
+ const randomNum = (maxNum) => Math.floor(Math.random() * Math.floor(maxNum))
+export { capitalise, joinWithAnd, randomNum }

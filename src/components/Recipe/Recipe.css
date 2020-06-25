@@ -1,10 +1,11 @@
-.recipe {
-  background-color: #EDF5E1;
-  display: flex;
-  flex-direction: column;
+.recipe{
   padding: 35px 0 45px 0;
   margin: 20px 30px;
   border-radius: 10px;
+  flex-direction: column;
+  background-color: #EDF5E1;
+  display: flex;
+  max-width: 1000px;
 }
  
 .extra-details{
@@ -20,39 +21,98 @@
   font-size: 10px;
 }
 
-.credits, .recipe a, .recipe table,.extra-details {
-  padding-left: 10%;
-}
-img{
-  height: 450px;
-}
 .recipe td{
   text-align: left;
   padding-left: 10px;
 }
-.recipe-top,
-.top-left,
-.top-right,
-.recipe-bottom,
-.bottom-left{
-  font-size: inherit;
+
+.recipe-top{
+  margin-top: 10px;
 }
 
+/****************Under 500 px**************************/
 @media only screen and (max-width: 500px) {
-  .recipe{
+
+  .recipe {
     text-align: center;
   }
+
   .extra-details, .credits, ol, a{
     text-align: left;
   }
   img{
-    height: 350px;
+    height: 250px;
+  }
+  .credits, .recipe a, .recipe table,.extra-details {
+    padding-left: 10%;
+  }
+  .recipe td{
+    min-width: 50px;
   }
 }
 
 @media only screen and (max-width: 350px) {
-.recipe{
-  margin: 5px;
-}
+  .recipe{
+    margin: 5px;
+  }
 }
 
+/****************Over 501 px**************************/
+@media only screen and (min-width: 501px){
+  
+  .recipe {
+    margin: 20px;
+  }
+  .recipe-top, .recipe-bottom{
+    display: flex;
+    justify-content: space-around;
+  }
+  .recipe td{
+    max-width: 150px;    
+  }
+  .recipe-top{
+    flex-direction: row-reverse;
+  }
+  .recipe-bottom{
+    flex-direction: row;
+  }
+  .bottom-right{
+    display: flex;
+    align-content: center;
+  }
+  .extra-details{
+    padding: 20% 20px;
+    min-width: 130px;
+    flex-grow: 1;
+    max-width: 200px;
+    max-height: 180px;
+    
+  }
+  .top-right, .top-left, .bottom-left, .bottom-right{
+    width: 50%;
+  }
+  .top-left, .bottom-left{
+    margin-left: 10px;
+  }
+  img{
+    height: 300px;
+    object-fit: contain;
+    /* width: 70%; */
+    max-width: 100%;
+  }
+}
+
+/****************Over 701 px**************************/
+@media only screen and (min-width: 701px){
+  .recipe {
+    margin: 40px;
+  }
+}
+
+/****************Over 1000 px**************************/
+@media only screen and (min-width: 1000px){
+  .recipe {
+    margin: 20px auto;
+  }
+
+}

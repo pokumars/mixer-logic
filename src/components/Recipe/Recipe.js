@@ -12,7 +12,7 @@ const Recipe = ({ drink }) => {
         <div className="top-right">
           <img alt={drink.name}
             src={require(`../../graphics/drinkImages/${drink.imageUrl}`)} />
-          <span className="credits">{drink.credits[0][1]} from {drink.credits[0][0]}</span> <br />
+          <span className="credits">{drink.credits.length === 0 ?  `${drink.credits[0][1]} from ${drink.credits[0][0]}` : ""}</span> <br />
 
         </div>
         <div className="top-left">
@@ -33,15 +33,17 @@ const Recipe = ({ drink }) => {
         <div className="bottom-left">
           <h4>HOW TO MIX</h4>
           <ol>
-            {drink.steps.map((step) => <li>{step}</li>)}
+            {drink.steps.map((step) => <li>{step}</li>)} 
           </ol>
-          <span className="credits">{drink.credits[1][1]} from {drink.credits[1][0]}</span>
+          <span className="credits">{drink.credits.length === 0? `${drink.credits[1][1]} from ${drink.credits[1][0]}`: ""}</span>
 
         </div>
-        <div className="extra-details bottom-left">
-          <span><b>Glass</b>: {drink.glass}</span><br />
-          <span><b>Method</b>: {joinWithAnd(drink.method.map(m => capitalise(m)))}</span><br />
-          <span><b>Garnish</b>: {joinWithAnd(drink.method.map(g => capitalise(g)))}</span><br />
+        <div className="bottom-right">
+          <div className="extra-details ">
+            <span><b>Glass</b>: {drink.glass}</span><br />
+            <span><b>Method</b>: {joinWithAnd(drink.method.map(m => capitalise(m)))}</span><br />
+            <span><b>Garnish</b>: {joinWithAnd(drink.method.map(g => capitalise(g)))}</span><br />
+          </div>
         </div>
       </div>
 
@@ -50,3 +52,4 @@ const Recipe = ({ drink }) => {
 }
 
 export default Recipe
+

@@ -8,8 +8,11 @@ import FeaturedDrinks from '../FeaturedDrinks/FeaturedDrinks';
 import { Footer } from '../Footer/Footer';
 import { drinks } from "../../allDrinks";
 import Recipe from '../Recipe/Recipe';
+import { randomNum } from '../../util/helperFunctions'
 
 function App() {
+
+  //<Recipe drink={featured[22]} />
   /*all drinks should be separate from searchResults because featured takes from all drinks and search results are search results.*/
   const searchRes = useSelector(state=> state.searchResults.res)
   const noResultsString = useSelector(state=> state.searchResults.empty)
@@ -19,7 +22,7 @@ function App() {
     <div  className="App">
       <div className="app-container">
         <Navbar />
-        <Recipe drink={featured[2]} />
+        <Recipe drink={featured[randomNum(30)]} />
         
       </div>
       <Footer />
