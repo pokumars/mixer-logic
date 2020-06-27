@@ -4,9 +4,12 @@
  * - ingredients are all small case
  */
 
+
 const drinks = [
   {
+      
       name: "drinkName",
+      dummyId: 0,
       ingredients: [
         ["ingredientName",4, "unit"],
         ["ingredientName",4, "unit"],
@@ -30,6 +33,7 @@ const drinks = [
     },
     {
       name: "Vodka Martini",
+      dummyId: 1,
       ingredients: [
         ["vodka",4, "cl"],
         ["dry vermouth",1, "dash"]
@@ -52,6 +56,7 @@ const drinks = [
     },
     {
       name: "Bloody Mary",
+      dummyId: 2,
       ingredients: [
         ["vodka", 2, "cl"],
         ["lime vodka", 2, "cl"],
@@ -77,6 +82,7 @@ const drinks = [
     },
     {
       name: "Spicy Mule",
+      dummyId: 3,
       ingredients: [
         ["vodka", 4, "cl"],
         ["ginger beer", 10, "cl"],
@@ -99,6 +105,7 @@ const drinks = [
     },
     {
       name: "Mango Breeze",
+      dummyId: 4,
       ingredients: [
         ["mango flavoured vodka", 4, "cl"],
         ["cranberry juice", 6, "cl"],
@@ -120,6 +127,7 @@ const drinks = [
     },
     {
       name: "Mini Mary",
+      dummyId: 5,
       ingredients: [
         ["vodka", 2, "cl"],
         ["tomato juice", 2, "cl"],
@@ -145,6 +153,7 @@ const drinks = [
     },
     {
       name: "Mini Sea Breeze",
+      dummyId: 6,
       ingredients: [
         ["grapefruit flavoured vodka", 2, "cl"],
         ["cranberry juice", 2, "cl"],
@@ -166,6 +175,7 @@ const drinks = [
     },
     {
       name: "Cinnamini",
+      dummyId: 7,
       ingredients: [
         ["cranberry flavoured vodka", 2, "cl"],
         ["apple juice", 2, "cl"],
@@ -189,6 +199,7 @@ const drinks = [
     },
     {
       name: "Caipiroska",
+      dummyId: 8,
       ingredients: [
         ["vodka", 4, "cl"],
         ["lime wedges", 4, "pcs"],
@@ -211,6 +222,7 @@ const drinks = [
     },
     {
       name: "Oriental Caipiroska",
+      dummyId: 9,
       ingredients: [
         ["mango flavoured vodka", 4, "cl"],
         ["honey syrup (2 parts honey mixed with 1 part hot water)", 2, "cl"],
@@ -236,6 +248,7 @@ const drinks = [
     },
     {
       name: "Grapefruit Caipiroska",
+      dummyId: 10,
       ingredients: [
         ["grapefruit flavoured vodka", 4, "cl"],
         ["honey syrup (2 parts honey, 1 part hot water)", 2, "cl"],
@@ -259,6 +272,7 @@ const drinks = [
     },
     {
       name: "Espresso Martini",
+      dummyId: 11,
       ingredients: [
         ["vodka", 4, "cl"],
         ["simple syrup (1 part sugar mixed with 1 part hot water)", 1, "cl"],
@@ -280,6 +294,7 @@ const drinks = [
     },
     {
       name: "Archipelago/ Vodka Soda",
+      dummyId: 12,
       ingredients: [
         ["vodka", 1, "part"],
         ["mineral water", 4, "parts"],
@@ -302,6 +317,7 @@ const drinks = [
     },
     {
       name: "Tropical Touch",
+      dummyId: 13,
       ingredients: [
         ["coconut flavoured vodka", 4, "cl"],
         ["coconut water", 2, "cl"],
@@ -327,6 +343,7 @@ const drinks = [
     },
     {
       name: "Coconut Crush",
+      dummyId: 14,
       ingredients: [
         ["coconut flavoured vodka", 3, "cl"],
         ["triple sec", 1, "cl"],
@@ -349,6 +366,7 @@ const drinks = [
     },
     {
       name: "Tropical Caipiroska",
+      dummyId: 15,
       ingredients: [
         ["coconut flavoured vodka", 4, "cl"],
         ["sugar", 2, "tsp"],
@@ -373,6 +391,7 @@ const drinks = [
     },
     {
       name: "Gin & Tonic",
+      dummyId: 16,
       ingredients: [
         ["vodka or gin (grapefruit flavour recommended)", 4, "cl"],
         ["tonic water", 12, "cl"],
@@ -393,6 +412,7 @@ const drinks = [
     },
     {
       name: "Lime & Cola",
+      dummyId: 17,
       ingredients: [
         ["lime(or citrus) flavoured vodka", 4, "cl"],
         ["cola", 12, "cl"],
@@ -414,6 +434,7 @@ const drinks = [
     },
     {
       name: "Apple Pie",
+      dummyId: 18,
       ingredients: [
         ["lime flavoured vodka", 2, "cl"],
         ["apple juice", 2, "cl"],
@@ -438,6 +459,7 @@ const drinks = [
     },
     {
       name: "Spicy Mango",
+      dummyId: 19,
       ingredients: [
         ["mango flavoured vodka", 2, "cl"],
         ["chocolate sauce", 2, "cl"],
@@ -461,6 +483,7 @@ const drinks = [
     },
     {
       name: "Cuba Libre",
+      dummyId: 20,
       ingredients: [
         ["cola", 10, "cl"],
         ["rum (preferrably white)", 5, "cl"],
@@ -483,6 +506,7 @@ const drinks = [
     },
     {
       name: "Pina Colada",
+      dummyId: 21,
       ingredients: [
         ["pineapple juice", 12, "cl"],
         ["white rum", 6, "cl"],
@@ -505,6 +529,7 @@ const drinks = [
     },
     {
       name: "Long Island Iced Tea",
+      dummyId: 22,
       ingredients: [
         ["vodka", 15, "ml"],
         ["tequila", 15, "ml"],
@@ -530,6 +555,7 @@ const drinks = [
     },
     {
       name: "Mojito",
+      dummyId: 23,
       ingredients: [
         ["white rum", 5, "cl"],
         ["fresh lime juice", 2, "cl"],
@@ -553,6 +579,7 @@ const drinks = [
     },
     {
       name: "Daiquiri",
+      dummyId: 24,
       ingredients: [
         ["white rum", 6, "cl"],
         ["lime juice", 2, "cl"],
@@ -574,6 +601,7 @@ const drinks = [
     },
     {
       name: "Hemingway Special",
+      dummyId: 25,
       ingredients: [
         ["rum (12 parts)", 6, "cl"],
         ["grapefruit juice (8 parts) ", 4, "cl"],
@@ -594,6 +622,7 @@ const drinks = [
     },
     {
       name: "Margarita",
+      dummyId: 26,
       ingredients: [
         ["lime wedge", 1, null],
         ["tequila", 5, "cl"],
@@ -606,7 +635,7 @@ const drinks = [
       garnish: ["salted rim"],
       categories: ["classic", "cocktail"],
       page: null,
-      credits:[["liquor.com", "image"]],
+      credits:[["liquor.com", "image"], ["Oheneba", "recipe"]],
       steps: [
        "Chill your cocktail glass.",
        "Place salt on a small shallow plate.",
@@ -617,6 +646,7 @@ const drinks = [
     },
     {
       name: "Sex On The Beach",
+      dummyId: 27,
       ingredients: [
         ["vodka", 4, "cl"],
         ["peach schnapps", 2, "cl"],
@@ -640,6 +670,7 @@ const drinks = [
     },
     {
       name: "Mimosa",
+      dummyId: 28,
       ingredients: [
         ["orange juice", 7, "cl"],
         ["sparkling wine", 7, "cl"]
@@ -650,7 +681,7 @@ const drinks = [
       garnish: ["orange wedge"],
       categories: ["cocktail", "classic"],
       page: null,
-      credits:[["liquor.com", "image"], ],
+      credits:[["thespruceeats.com", "image"],["Oheneba", "recipe"] ],
       steps: [
        "Pour orange juice into a flute glass.",
        "Gently pour the sparkling wine.",
@@ -659,6 +690,7 @@ const drinks = [
     },
     {
       name: "Black Russian",
+      dummyId: 29,
       ingredients: [
         ["vodka", 5, "cl"],
         ["coffee liqueur", 2, "cl"],
@@ -681,6 +713,7 @@ const drinks = [
     },
     {
       name: "White Russian",
+      dummyId: 30,
       ingredients: [
         ["vodka", 5, "cl"],
         ["coffee liqueur", 2, "cl"],
@@ -693,7 +726,7 @@ const drinks = [
       garnish: [null],
       categories: ["cocktail"],
       page: null,
-      credits:[["liquor.com", "image"]],
+      credits:[["liquor.com", "image"], ["Oheneba", "recipe"]],
       steps: [
        "Add the vodka and coffee liqueur to a glass with ice.",
        "Top with cream and stir."

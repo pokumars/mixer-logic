@@ -1,6 +1,10 @@
 .drink-list span{
   text-align: center;
 }
+.drink-list a{
+  text-decoration: none;
+  color: inherit;
+}
 .result-info{
   width: 100%;
   text-align: center;
@@ -9,6 +13,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 
 @media only screen and (max-width: 500px) {
   .list{

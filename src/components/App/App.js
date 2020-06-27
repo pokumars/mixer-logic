@@ -7,6 +7,7 @@ import SearchResults from '../SearchResults/SearchResults';
 import FeaturedDrinks from '../FeaturedDrinks/FeaturedDrinks';
 import { Footer } from '../Footer/Footer';
 import { drinks } from "../../allDrinks";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Recipe from '../Recipe/Recipe';
 import { randomNum } from '../../util/helperFunctions'
 
@@ -17,13 +18,38 @@ function App() {
   const searchRes = useSelector(state=> state.searchResults.res)
   const noResultsString = useSelector(state=> state.searchResults.empty)
   const featured = drinks
+  const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
     
   return (
-    <div  className="App">
+    <div className="App">
       <div className="app-container">
         <Navbar />
-        <Recipe drink={featured[randomNum(30)]} />
-        
+        <Router>
+          <Switch>
+            <Route path="/drink/:id" >
+             <Recipe  drinks = {drinks}/>
+            </Route>
+              
+            <Route path="/about">
+              <h1>About page</h1>
+            </Route>
+            <Route path="/">
+              <SearchBar />
+
+              {/*when search results return empty and the noResultsString is no longer an empty string then give a no results message the "noResultsString.length > 1" is important because on start, search results
+  are also empty but no search has been done yet. The noResultsString only gets filled when in the searchReducer if it returns an empty array. that is our indicator for when 0 results is due to a search.*/
+                (searchRes.length < 1 && noResultsString.length > 1) && <h3 className="no-results">{noResultsString}</h3>
+              }
+
+              {/*FeaturedDrinks should disapear when there are search results available
+i.e only show featured when search results are empty*/
+                searchRes.length < 1 ? <FeaturedDrinks allDrinks={featured} /> : <SearchResults results={searchRes} />
+              }
+            </Route>
+
+
+          </Switch>
+        </Router>
       </div>
       <Footer />
     </div>
@@ -45,4 +71,6 @@ function App() {
   // searchResults when searchResults are less than a certain amount
   searchRes.length < 3 && <FeaturedDrinks allDrinks={drinks}/>
 }*/
+
+//<Recipe drink={featured[randomNum(30)]} />
 export default App;
