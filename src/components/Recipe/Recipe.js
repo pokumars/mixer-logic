@@ -8,7 +8,6 @@ const Recipe = ({ drinks }) => {
   //TODO: fix the condition to render the recipe/image credits
   const drinkId = useParams().id
   const drink = drinks.find(d => Number(d.dummyId) === Number(drinkId))
-  console.log(drink)
 
   return (
     <div className="recipe">
