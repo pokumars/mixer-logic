@@ -25,19 +25,21 @@ To be added
 In the winter of 2020 I was on exchange in Glasgow, my third year of university,
 and looking for internships back in Helsinki while COVID-19 raged on. Despite
 it being in the tech industry, it was difficult as I was not physically present 
-to do some of the recruiting events the companies had organised. With some 
-other companies, I made it quite far in their recruitment processes but failed
-at the last hurdles. I could not get an internship software development. I had
-to get demonstrably better.
+to do some of the recruiting events the companies had organised. Another 
+difficulty I believe was my unfamiliarity with some of the tools and frameworks
+currently being used in in the industry such as React, redux etc- basically I 
+was not yet good enough. With some other companies, I made it quite far in their
+recruitment processes but failed at the last hurdles. I could not get an 
+internship software development. I had to get demonstrably better.
 
-I decided to make this web application because I realised that I had not done
-many personal projects. I had not come across many things that I was really 
-interested in building until I found one beautifully designed magazine/booklet
-by [Finlandia Vodka](https://www.finlandia.com/en/) with cocktail recipes. I decided to turn that into a web page. 
+I had to build more projects. I decided to make this web application because I 
+realised that I had not done many personal projects. I had not come across many 
+things that I was really interested in building until I found one beautifully 
+designed magazine/booklet by [Finlandia Vodka](https://www.finlandia.com/en/) with cocktail recipes. I decided to turn that into a web page. 
 
 ## Packages/frameworks used
 * [React](https://reactjs.org/)
-* [React-Router]()
+* [React-Router](https://reacttraining.com/react-router/)
 * [Redux](https://react-redux.js.org/)
 * [A bit of Jest](https://jestjs.io/)
 

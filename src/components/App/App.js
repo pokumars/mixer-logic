@@ -10,6 +10,7 @@ import { drinks } from "../../allDrinks";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Recipe from '../Recipe/Recipe';
 import { randomNum } from '../../util/helperFunctions'
+import About from '../About/About';
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
             </Route>
               
             <Route path="/about">
-              <h1>About page</h1>
+              
+              <About/>
             </Route>
             <Route path="/">
               <SearchBar />
