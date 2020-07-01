@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <div className="about">
-      <h1>About page</h1>
+      <h1>About mixer-logic</h1>
       <ul className="toc-navigation">
         <li><a href="#introduction" onClick={scrollTo}>Introduction</a></li>
         <li><a href="#how-to-use">How to Use</a></li>
@@ -41,7 +41,7 @@ const About = () => {
 
       <h2 id="how-to-use">How to use?</h2>
       <p>
-        On the page, the user selects what criteria they want to search by, name or method, and they type in their search query into the search bar and voilà, cocktail results.
+        On the page, the user selects what criteria they want to search by,name or method, and they type in their search query into the search bar and voilà, cocktail results.
         There is a randomly generated list of featured drinks whenever there has been no search done or there were no results returned for what the user searched.
       </p>
 
@@ -49,7 +49,7 @@ const About = () => {
       <h2 id="motivation"> Motivation</h2>
 
       <p>
-        I had to build more projects. I decided to make this web application because I
+        I decided to make this web application because I
         realised that I had not done many personal projects that looked good. I had not come across many
         things that I was really interested in building until I found one beautifully
         designed magazine/booklet by <a href="https://www.finlandia.com/en/">Finlandia Vodka</a> with cocktail recipes. I decided to turn that into a web page.

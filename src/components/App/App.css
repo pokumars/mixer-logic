@@ -14,6 +14,27 @@
   text-align: center;
   padding: 8px;
 }
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.warning {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
 @media only screen and (max-width : 500px) {
   .app-container{
     min-height: 75vh;

@@ -14,8 +14,11 @@ import About from '../About/About';
 
 
 const WarningPrompt = () => {
+  const warningStyle = {
+    
+  }
   return (
-    <div className="alert">
+    <div className="warning">
       <span className="closebtn" onClick={({ target }) => target.parentNode.style.display = 'none'}>&times;</span>
       Warning: Do not send this content to underaged individuals.
       Consume alcohol responsibly.
