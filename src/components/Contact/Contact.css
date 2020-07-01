@@ -1,0 +1,39 @@
+.contact{
+  display:flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 5px;
+  max-width: 400px;
+  /* background-color: #EDF5E1; */
+ background-color: #7e7b7b;
+}
+.my-name{
+  margin: 15px auto;
+}
+.socials{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.socials img, .my-cv img, .my-email img{
+  height: 50px;
+}
+.socials a{
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  margin: 10px;
+  border-radius: 10px;
+  /* color: #05386B; */
+  color: #f09b9b;
+  /* border: 1px solid #05386B; */
+  border: 1px solid #f09b9b;
+}
+
+.my-email{
+  display: flex;
+}
+
+.my-cv{
+display: flex;
+}

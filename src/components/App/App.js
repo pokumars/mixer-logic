@@ -11,12 +11,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Recipe from '../Recipe/Recipe';
 //import { randomNum } from '../../util/helperFunctions'
 import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 
 const WarningPrompt = () => {
-  const warningStyle = {
-    
-  }
   return (
     <div className="warning">
       <span className="closebtn" onClick={({ target }) => target.parentNode.style.display = 'none'}>&times;</span>
@@ -34,7 +32,7 @@ function App() {
   const searchRes = useSelector(state=> state.searchResults.res)
   const noResultsString = useSelector(state=> state.searchResults.empty)
   const featured = drinks
-  const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
+  //const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
     
   return (
     <div className="App">
@@ -42,6 +40,9 @@ function App() {
         <Navbar />
         <Router>
           <Switch>
+            <Route path="/contact">
+              <Contact />
+            </Route>
             <Route path="/drink/:id" >
              <Recipe  drinks = {drinks}/>
             </Route>
