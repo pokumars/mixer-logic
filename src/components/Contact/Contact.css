@@ -21,19 +21,21 @@
 .socials a{
   display: flex;
   flex-direction: column;
-  padding:10px;
-  margin: 10px;
-  border-radius: 10px;
-  /* color: #05386B; */
-  color: #f09b9b;
+}
+.contact-element{
   /* border: 1px solid #05386B; */
   border: 1px solid #f09b9b;
+  border-radius: 10px;
+    /* color: #05386B; */
+  color: #f09b9b;
+  padding:10px;
+  margin: 10px;
 }
-
-.my-email{
+.contact-element a{
+  /* color: #05386B; */
+  color: #f09b9b;
+}
+.my-email, .my-cv{
   display: flex;
-}
-
-.my-cv{
-display: flex;
+  align-items: center;
 }
