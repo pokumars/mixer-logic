@@ -58,7 +58,7 @@ const deepSearch= (arr, criteria,query) =>{
         }
       });
       break;
-    case FIND_BY_ALCOHOL://TODO: add this method
+    case FIND_BY_ALCOHOL:
       console.log('searching by alcohol')
 
       arr.forEach(parent => {

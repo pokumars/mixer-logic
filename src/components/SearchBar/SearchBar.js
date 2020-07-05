@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './SearchBar.css';
 import { useDispatch } from 'react-redux';
-import { findDrinksByName, findDrinksByMethod } from '../../reducers/searchReducer';
+import { findDrinksByName, findDrinksByMethod, findDrinksByAlcohol } from '../../reducers/searchReducer';
 
 
 
@@ -23,7 +23,7 @@ export const SearchBar = () => {
         dispatch(findDrinksByMethod(query))
         break;
       case "alcohol/spirit":
-        dispatch(findDrinksByMethod(query))
+        dispatch(findDrinksByAlcohol(query))
         break;
       default:
         dispatch( (query));
@@ -57,7 +57,7 @@ export const SearchBar = () => {
         <select name="searchCriteria" 
         id="searchCriteria" onChange={handleCriterionChange}>
           <option value="name">Name</option>
-          <option value="method">Method</option> 
+          <option value="method">Method</option>
           <option value="alcohol/spirit">Alcohol/Spirit</option>
         </select>
       </div>
