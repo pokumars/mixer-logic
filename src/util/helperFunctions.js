@@ -16,8 +16,8 @@ const joinWithAnd= (stringArr) => {//join array of strings with commas and add "
  const randomNum = (maxNum) => Math.floor(Math.random() * Math.floor(maxNum))
 export { capitalise, joinWithAnd, randomNum }
 
-//a drink object 
-const exampleDrink =   {
+//example drink object 
+/*const exampleDrink =   {
       
   name: "drinkName",
   dummyId: 0,
@@ -32,6 +32,7 @@ const exampleDrink =   {
   method: ["method1","method2"],
   garnish: ["garnish1","garnish2"],
   categories: ["category1", "category2"],
+  liquor: [liquor1, liquor 2]
   page: 1,
   credits:[["entity1", "forWhatImg"], ["entity1", "forWhat"]],
   steps: [
@@ -41,4 +42,4 @@ const exampleDrink =   {
    "step4",
    "step5"
   ]    
-}
+}*/

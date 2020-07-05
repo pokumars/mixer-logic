@@ -5,7 +5,7 @@ import { drinks } from '../allDrinks';
 
 const FIND_BY_NAME ="FIND_BY_NAME";
 const FIND_BY_METHOD= "FIND_BY_METHOD";
-const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
+//const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 const FIND_BY_ALCOHOL= "FIND_BY_ALCOHOL";
 const noResults = "There were no results. Try something different"
 
@@ -17,7 +17,8 @@ const searchReducer = (state={res: [], empty:""}, action) => {
     case FIND_BY_METHOD:
       return action.data;
 
-    case FIND_BY_INGREDIENT:
+    case FIND_BY_ALCOHOL:
+
       return action.data;
     default:
       return state;
@@ -59,13 +60,18 @@ const deepSearch= (arr, criteria,query) =>{
       break;
     case FIND_BY_ALCOHOL://TODO: add this method
       console.log('searching by alcohol')
+
+      arr.forEach(parent => {
+        if (parent.alcohols.filter(alc => alc.toLowerCase().indexOf(query.toLowerCase())!== -1).length >0) {
+          results.push(parent)
+        }
+      });
     break;
   //TODO: add find by ingredient
     default:
       return results;
   }
  
-  
   console.log(results.length)
   return results
 }
@@ -77,6 +83,18 @@ export const findDrinksByMethod = (searchText) => {
   console.log("finding by method")
   return {
     type:FIND_BY_METHOD,
+    data: {res: foundDrinks, empty}
+  }
+}
+
+export const findDrinksByAlcohol = (searchText) => {
+  //searches for full text && also search for partial text match
+  const foundDrinks= deepSearch(drinks, FIND_BY_ALCOHOL, searchText)
+  const empty = emptyResultsText(foundDrinks)
+
+  console.log("finding by alcohol")
+  return {
+    type:FIND_BY_ALCOHOL,
     data: {res: foundDrinks, empty}
   }
 }

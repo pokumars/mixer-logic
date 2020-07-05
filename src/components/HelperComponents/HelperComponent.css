@@ -1,0 +1,9 @@
+.custom-link{
+  border: none;
+  text-decoration: underline;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  font-size: inherit;
+  padding: 0;
+}

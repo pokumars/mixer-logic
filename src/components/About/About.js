@@ -1,10 +1,8 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
+import { InternalLink } from '../HelperComponents/HelperComponents'
 import './About.css'
 
 const About = () => {
-  const history = useHistory(); 
-
   //scrolls to the element defined in the href of the caller
   //smoothly in most browsers except IE
   const scrollTo = (event) => {
@@ -13,11 +11,7 @@ const About = () => {
     const elmnt = document.getElementById(event.target.hash.split('#').pop());
     elmnt.scrollIntoView({behavior: "smooth"});
   }
-
-  const toHome = (event) => {
-    event.preventDefault()
-    history.push(`/`);
-  }
+  
 
   return (
     <div className="about">
@@ -34,7 +28,7 @@ const About = () => {
       
       <h2 id="introduction">Introduction</h2>
       <p>
-        <a href="#" onClick={toHome} >Mixer-logic</a> is a webpage (SPA) that can be used to search
+      <InternalLink destination="/" text="Mixer-logic" color="#f09b9b"/> is a webpage (SPA) that can be used to search
        for different cocktails and their recipes. The search can be done based
        on name, method and in the future what alcohols it contains.
       </p>

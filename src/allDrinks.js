@@ -18,6 +18,7 @@ const drinks = [
       method: ["stir"],
       garnish: ["olives"," lemon twist"],
       categories: ["classic", "martini", "cocktail"],
+      alcohols: ["vodka", "dry vermouth"],
       page: 15,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -46,6 +47,7 @@ const drinks = [
       method: ["stir"],
       garnish: ["celery stalk", "cucumber"],
       categories: ["classic", "ordinary drink"],
+      alcohols: ["vodka", "lime vodka"],
       page: 16,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -70,6 +72,7 @@ const drinks = [
       method: ["muddle","build"],
       garnish: ["cucumber stick","lime wedge"],
       categories: ["vodka", "cocktail"],
+      alcohols: ["vodka", "ginger beer"],
       page: 24,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -91,7 +94,8 @@ const drinks = [
       glass: "highball",
       method: ["build"],
       garnish: ["slice of mango"],
-      categories: ["mango", "cocktail"],
+      categories: ["cocktail"],
+      alcohols: ["mango flavoured vodka"],
       page: 31,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -117,6 +121,7 @@ const drinks = [
       method: ["shake"],
       garnish: ["cherry tomato","celery stalk"],
       categories: ["shot", "short drinks"],
+      alcohols: ["vodka"],
       page: 33,
       credits: [["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -140,6 +145,7 @@ const drinks = [
       method: ["build"],
       garnish: ["pink grapefruit","sugar"],
       categories: ["shot", "rituals"],
+      alcohols: ["grapefruit flavoured vodka"],
       page: 34,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -164,6 +170,7 @@ const drinks = [
       method: ["shake"],
       garnish: ["apple wedge","cinnamon", "sugar"],
       categories: ["shot", "rituals"],
+      alcohols: ["cranberry flavoured vodka"],
       page: 34,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -186,6 +193,7 @@ const drinks = [
       method: ["muddle","stir"],
       garnish: ["caipiroska spoon"],
       categories: ["caipiroska", "cocktail"],
+      alcohols: ["vodka"],
       page: 35,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -211,6 +219,7 @@ const drinks = [
       method: ["muddle","stir"],
       garnish: ["caipiroska spoon"],
       categories: ["caipiroska", "cocktail"],
+      alcohols: ["mango flavoured vodka"],
       page: 36,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -236,6 +245,7 @@ const drinks = [
       method: ["muddle","stir"],
       garnish: ["pink grapefruit wedge"],
       categories: ["caipiroska", "cocktail"],
+      alcohols: ["grapefruit flavoured vodka"],
       page: 37,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -258,6 +268,7 @@ const drinks = [
       method: ["shake"],
       garnish: ["coffee beans"],
       categories: ["martini", "coffee"],
+      alcohols: ["vodka"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -281,6 +292,7 @@ const drinks = [
       method: ["build"],
       garnish: ["lemon twist","herbs"],
       categories: ["cocktail"],
+      alcohols: ["vodka"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -307,6 +319,7 @@ const drinks = [
       method: ["stir"],
       garnish: ["pineapple leaf","lime wedge"],
       categories: ["cocktail", "tropical"],
+      alcohols: ["coconut flavoured vodka"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -331,6 +344,7 @@ const drinks = [
       method: ["shake","build"],
       garnish: ["pineapple wedge"],
       categories: ["cocktail", "tropical"],
+      alcohols: ["coconut flavoured vodka", "triple sec"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -355,6 +369,7 @@ const drinks = [
       method: ["muddle","stir"],
       garnish: ["cilantro","pineapple slice"],
       categories: ["caipiroska", "tropical"],
+      alcohols: ["coconut flavoured vodka"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -377,6 +392,7 @@ const drinks = [
       method: ["build"],
       garnish: ["lime"],
       categories: ["cocktail"],
+      alcohols: ["vodka or gin (grapefruit flavour recommended)"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -399,6 +415,7 @@ const drinks = [
       method: ["build"],
       garnish: ["lime twist"],
       categories: ["cocktail"],
+      alcohols: ["lime(or citrus) flavoured vodka"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -423,6 +440,7 @@ const drinks = [
       method: ["stir","build"],
       garnish: ["apple slice","cinnamon"],
       categories: ["shot"],
+      alcohols: ["lime flavoured vodka"],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -447,6 +465,7 @@ const drinks = [
       method: ["shake"],
       garnish: ["chocolate chips","chili pepper"],
       categories: ["shot"],
+      alcohols: ["mango flavoured vodka", ""],
       page: null,
       credits:[["Finlandia Vodka", "image"], ["Finlandia Vodka", "recipe"]],
       steps: [
@@ -470,6 +489,7 @@ const drinks = [
       method: ["build","stir"],
       garnish: ["lime wedge"],
       categories: ["rum", "ordinary drink", "classic"],
+      alcohols: ["rum (preferrably white)"],
       page: null,
       credits:[["BBC goodfood", "image"], ["BBC goodfood", "recipe"]],
       steps: [
@@ -494,6 +514,7 @@ const drinks = [
       method: ["blend"],
       garnish: ["pineapple wedge"],
       categories: ["cocktail", "tropical", "classic"],
+      alcohols: ["white rum"],
       page: null,
       credits:[["BBC goodfood", "image"], ["maliburumdrinks.com", "recipe"]],
       steps: [
@@ -520,6 +541,7 @@ const drinks = [
       method: ["stir"],
       garnish: ["lemon slice"],
       categories: ["cocktail", "classic"],
+      alcohols: ["vodka", "tequila", "white rum", "gin", "cointreau"],
       page: null,
       credits:[["BBC goodfood", "image"], ["International Bartender Association", "recipe"]],
       steps: [
@@ -543,6 +565,7 @@ const drinks = [
       method: ["muddle","shake"],
       garnish: ["mint leaf", "lime wheel"],
       categories: ["classic", "cocktail"],
+      alcohols: ["white rum"],
       page: null,
       credits:[["liquor.com", "image"], ["International Bartender Association", "recipe"]],
       steps: [
@@ -565,6 +588,7 @@ const drinks = [
       method: ["stir","shake"],
       garnish: ["lime wheel", "nothing"],
       categories: ["cocktail", "classic"],
+      alcohols: ["white rum"],
       page: null,
       credits:[["BBC goodfood", "image"], ["International Bartenders Association", "recipe"]],
       steps: [
@@ -588,6 +612,7 @@ const drinks = [
       method: ["shake",],
       garnish: ["lime wedge"],
       categories: ["cocktail", "classic"],
+      alcohols: ["maraschino liqueur", "rum"],
       page: null,
       credits:[["thespruceeats.com", "image"], ["International Bartender Association", "recipe"]],
       steps: [
@@ -609,6 +634,7 @@ const drinks = [
       method: ["shake"],
       garnish: ["salted rim"],
       categories: ["classic", "cocktail"],
+      alcohols: ["tequila", "triple sec"],
       page: null,
       credits:[["liquor.com", "image"], ["Oheneba", "recipe"]],
       steps: [
@@ -635,6 +661,7 @@ const drinks = [
       method: ["shake"],
       garnish: ["orange slice ","maraschino cherry", "cocktail umbrella"],
       categories: ["cocktail", "classic"],
+      alcohols: ["vodka", "peach schnapps"],
       page: null,
       credits:[["BBC goodfood", "image"], ["liquor.com", "recipe"]],
       steps: [
@@ -655,6 +682,7 @@ const drinks = [
       method: ["stir"],
       garnish: ["orange wedge"],
       categories: ["cocktail", "classic"],
+      alcohols: ["sparkling wine"],
       page: null,
       credits:[["thespruceeats.com", "image"],["Oheneba", "recipe"] ],
       steps: [
@@ -677,6 +705,7 @@ const drinks = [
       method: ["build","stir"],
       garnish: ["maraschino cherry"],
       categories: ["cocktail", ],
+      alcohols: ["vodka", "coffee liqueur"],
       page: null,
       credits:[["thespruceeats.com", "image"], ["BBC goodfood", "recipe"]],
       steps: [
@@ -700,6 +729,7 @@ const drinks = [
       method: ["build","stir"],
       garnish: [null],
       categories: ["cocktail"],
+      alcohols: ["vodka", "coffee liqueur"],
       page: null,
       credits:[["liquor.com", "image"], ["Oheneba", "recipe"]],
       steps: [

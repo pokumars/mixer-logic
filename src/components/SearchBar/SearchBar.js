@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './SearchBar.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { findDrinksByName, findDrinksByMethod } from '../../reducers/searchReducer';
 
 
@@ -22,7 +22,9 @@ export const SearchBar = () => {
       case "method":
         dispatch(findDrinksByMethod(query))
         break;
-    
+      case "alcohol/spirit":
+        dispatch(findDrinksByMethod(query))
+        break;
       default:
         dispatch( (query));
     }
@@ -55,7 +57,8 @@ export const SearchBar = () => {
         <select name="searchCriteria" 
         id="searchCriteria" onChange={handleCriterionChange}>
           <option value="name">Name</option>
-          <option value="method">Method</option>
+          <option value="method">Method</option> 
+          <option value="alcohol/spirit">Alcohol/Spirit</option>
         </select>
       </div>
 

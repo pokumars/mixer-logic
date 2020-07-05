@@ -4,10 +4,12 @@ import { capitalise } from "../../util/helperFunctions";
 import { useHistory } from "react-router-dom";
 
 const DrinkPreview = ({drink}) => {
-  const history = useHistory();  
+  const history = useHistory();
+
   const toDrinkPage = () => {//i used this instead of <a> tag because I realised too late to refactor
     history.push(`/drink/${drink.dummyId}`);
   }
+  
   return (
     <div className="drink-preview" onClick={toDrinkPage}>
       <div className="top-half">

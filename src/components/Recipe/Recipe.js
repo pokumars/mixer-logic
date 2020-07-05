@@ -11,7 +11,9 @@ const Recipe = ({ drinks }) => {
 
   return (
     <div className="recipe">
-      <a ><b>+ Add to Favorites</b></a>
+      {//TODO: this will be possible when i have the user sign in capability
+      //<a ><b>+ Add to Favorites</b></a>
+      }
       <div className="recipe-top">
         <div className="top-right">
           <img alt={drink.name}

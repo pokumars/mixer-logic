@@ -3,6 +3,7 @@ import './Navbar.css'
 import Button from '../Button/Button'
 
 export const Navbar = () => {
+
   return (
     <div className="navbar">
       <div className="logo-container">
