@@ -17,12 +17,12 @@ const Contact = () => {
       </div>
       <div className="my-email contact-element">
         <img alt="cv" src={require('../../graphics/icons/email-icon.svg')}/>
-        <p>Shoot me some feedback @ ohenebakob@yahoo.com</p>
+        <p>Shoot me some feedback @ <br/> ohenebakob@yahoo.com</p>
       </div>
       <div className="my-cv contact-element">
         <img alt="cv" src={require('../../graphics/icons/cv-icon.svg')}/>
         <p><a href={require('../../graphics/cv_oheneba_pokumarboah.pdf')} target="_blank" rel="noopener nonreferrer">
-          my Curriculum Vitae
+          my curriculum vitae
         </a></p>
       </div>
       

@@ -1,4 +1,4 @@
-.contact{
+.contact {
   display:flex;
   flex-direction: column;
   margin: 20px auto;
@@ -38,4 +38,8 @@
 .my-email, .my-cv{
   display: flex;
   align-items: center;
+}
+
+.my-email p, .my-cv p {
+  margin-left: 20px;
 }

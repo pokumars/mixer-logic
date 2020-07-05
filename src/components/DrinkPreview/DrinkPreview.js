@@ -12,7 +12,7 @@ const DrinkPreview = ({drink}) => {
     <div className="drink-preview" onClick={toDrinkPage}>
       <div className="top-half">
         <div className="headers">
-          <h1>{drink.name}</h1> <p>{drink.dummyId}</p>
+          <h1>{drink.name}</h1>
           <p><b>Ingredients</b></p>
         </div>
         <img alt={drink.name} className="drink-image" 
