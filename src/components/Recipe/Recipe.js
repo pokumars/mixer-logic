@@ -46,9 +46,9 @@ const Recipe = ({ drinks }) => {
         </div>
         <div className="bottom-right">
           <div className="extra-details ">
-            <span><b>Glass</b>: {drink.glass}</span><br />
+            <span><b>Glass</b>: {capitalise(drink.glass)}</span><br />
             <span><b>Method</b>: {joinWithAnd(drink.method.map(m => capitalise(m)))}</span><br />
-            <span><b>Garnish</b>: {joinWithAnd(drink.method.map(g => capitalise(g)))}</span><br />
+            <span><b>Garnish</b>: {joinWithAnd(drink.garnish.map(g => capitalise(g)))}</span><br />
           </div>
         </div>
       </div>

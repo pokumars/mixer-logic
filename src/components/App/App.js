@@ -15,11 +15,14 @@ import Contact from '../Contact/Contact';
 
 
 const WarningPrompt = () => {
+  //TODO: make this disappear after some seconds
+  let message= `Warning: Do not send this content to underaged individuals.
+  Consume alcohol responsibly.`
+
   return (
     <div className="warning">
       <span className="closebtn" onClick={({ target }) => target.parentNode.style.display = 'none'}>&times;</span>
-      Warning: Do not send this content to underaged individuals.
-      Consume alcohol responsibly.
+     {message}
     </div>
   )
 }

@@ -7,10 +7,10 @@
   margin: 0 auto;
 }
 .no-results{
-  /* color: #05386B; */
-  color: black;
-   /* background-color: #EDF5E1; */
-   background-color: #7e7b7b;
+  color: #05386B;
+  /* color: black; */
+   background-color: #EDF5E1;
+   /* background-color: #7e7b7b; */
   text-align: center;
   padding: 8px;
 }

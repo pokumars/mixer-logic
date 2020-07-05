@@ -28,7 +28,7 @@ const About = () => {
       
       <h2 id="introduction">Introduction</h2>
       <p>
-      <InternalLink destination="/" text="Mixer-logic" color="#f09b9b"/> is a webpage (SPA) that can be used to search
+      <InternalLink destination="/" text="Mixer-logic" /> is a webpage (SPA) that can be used to search
        for different cocktails and their recipes. The search can be done based
        on name, method and in the future what alcohols it contains.
       </p>

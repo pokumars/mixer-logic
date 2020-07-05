@@ -1,6 +1,6 @@
 .navbar{
-  /* background-color: #5CDB95; */
-background-color: #000804;
+  background-color: #5CDB95;
+/* background-color: #000804; */
   max-width: 1200;
   padding: 10px 25px;
   display: flex;
@@ -10,8 +10,8 @@ background-color: #000804;
 
 .logo-container a{
 text-decoration: none;
-/* color: #05386B; */
-color: #f09b9b; 
+color: #05386B;
+/* color: #f09b9b; */ 
 font-size: 24px;
 }
 .logo{

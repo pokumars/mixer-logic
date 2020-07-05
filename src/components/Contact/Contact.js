@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="my-cv contact-element">
         <img alt="cv" src={require('../../graphics/icons/cv-icon.svg')}/>
         <p><a href={require('../../graphics/cv_oheneba_pokumarboah.pdf')} target="_blank" rel="noopener noreferrer">
-          my curriculum itae
+          curriculum vitae
         </a></p>
       </div>
       
