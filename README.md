@@ -16,7 +16,18 @@ On the page, the user selects what criteria they want to search by, name or meth
 There is a randomly generated list of featured drinks whenever there has been no search done or there were no results returned for what the user searched.
 
 ## Screenshots
-To be added
+
+| Recipe (desktop)   | Search results (desktop) |
+|------------|-------------| 
+| ![recipe desktop](https://user-images.githubusercontent.com/33485810/86541137-37d1c680-bf13-11ea-9b61-ea9c93a5ecdf.jpg) | ![search results desktop](https://user-images.githubusercontent.com/33485810/86541144-44eeb580-bf13-11ea-9098-e735c92311a3.jpg) |
+
+| Recipe (mobile)   | Search results (mobile) |
+|------------|-------------| 
+| ![recipe mobile](https://user-images.githubusercontent.com/33485810/86541150-4cae5a00-bf13-11ea-96fb-515dcd81aca2.jpg) | ![search results mobile](https://user-images.githubusercontent.com/33485810/86541158-55069500-bf13-11ea-9709-a2246df7087c.jpg) |
+
+| Search demonstration |
+|-------------|
+![search demo desktop](https://user-images.githubusercontent.com/33485810/86541209-cba39280-bf13-11ea-8734-f64b323cb1f3.gif)
 
 ## Motivation
  I decided I needed to build more personal projects to get better at the tools
