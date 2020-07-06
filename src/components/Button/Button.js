@@ -3,6 +3,7 @@ import React from 'react'
 import './Button.css'
 
 const Button = ({ btnText, btnColor, handleClick, btnType }) => {
+  // btnType is reference to whether it is of type reste, submit or the basic one button
   return (
     <>
       <button onClick={handleClick}

@@ -25,7 +25,7 @@ const Contact = () => {
           curriculum vitae
         </a></p>
       </div>
-      
+
     </div>
   )
 }
