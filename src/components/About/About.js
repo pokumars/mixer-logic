@@ -3,15 +3,14 @@ import { InternalLink } from '../HelperComponents/HelperComponents'
 import './About.css'
 
 const About = () => {
-  //scrolls to the element defined in the href of the caller
-  //smoothly in most browsers except IE
+  // scrolls to the element defined in the href of the caller
+  // smoothly in most browsers except IE
   const scrollTo = (event) => {
     event.preventDefault()
-    //take the hashtag and remove hashtag from the front
-    const elmnt = document.getElementById(event.target.hash.split('#').pop());
-    elmnt.scrollIntoView({behavior: "smooth"});
+    // take the hashtag and remove hashtag from the front
+    const elmnt = document.getElementById(event.target.hash.split('#').pop())
+    elmnt.scrollIntoView({ behavior: 'smooth' })
   }
-  
 
   return (
     <div className="about">
@@ -24,11 +23,9 @@ const About = () => {
         <li><a href="#features" onClick={scrollTo}>Features</a></li>
       </ul>
 
-
-      
       <h2 id="introduction">Introduction</h2>
       <p>
-      <InternalLink destination="/" text="Mixer-logic" /> is a webpage (SPA) that can be used to search
+        <InternalLink destination="/" text="Mixer-logic" /> is a webpage (SPA) that can be used to search
        for different cocktails and their recipes. The search can be done based
        on name, method and in the future what alcohols it contains.
       </p>
@@ -38,7 +35,6 @@ const About = () => {
         On the page, the user selects what criteria they want to search by,name or method, and they type in their search query into the search bar and voilà, cocktail results.
         There is a randomly generated list of featured drinks whenever there has been no search done or there were no results returned for what the user searched.
       </p>
-
 
       <h2 id="motivation"> Motivation</h2>
 
