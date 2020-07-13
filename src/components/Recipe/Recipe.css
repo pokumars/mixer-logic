@@ -63,6 +63,7 @@
   
   .recipe {
     margin: 20px;
+    padding-left: 20px;
   }
   .recipe-top, .recipe-bottom{
     display: flex;
