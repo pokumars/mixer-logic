@@ -21,4 +21,24 @@ const InternalLink = ({ text, destination, color = '#05386B', bold = 'false' }) 
   )
 }
 
-export { InternalLink }
+const WarningPrompt = () => {
+  const message = `Warning: Do not send this content to underaged individuals.
+  Consume alcohol responsibly.`
+  const WARNING_STORE = 'warningClosed'
+  const closed = localStorage.getItem(WARNING_STORE)
+
+  const closeWarning = (event) => {
+    event.target.parentNode.style.display = 'none'
+    localStorage.setItem(WARNING_STORE, true)
+  }
+
+  // If the user closes the warning once, it should not have the warning open next time
+  return (
+    closed ? <></> : <div className="warning">
+      <span className="closebtn" onClick={closeWarning}>&times;</span>
+      {message}
+    </div>
+  )
+}
+
+export { InternalLink, WarningPrompt }
