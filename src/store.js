@@ -1,7 +1,6 @@
-import { createStore, combineReducers } from 'redux';
-import searchReducer from './reducers/searchReducer';
-import { composeWithDevTools } from 'redux-devtools-extension';
-
+import { createStore, combineReducers } from 'redux'
+import searchReducer from './reducers/searchReducer'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 const reducer = combineReducers({
   searchResults: searchReducer
@@ -12,4 +11,4 @@ const store = createStore(
   composeWithDevTools()
 )
 
-export default store;
+export default store
