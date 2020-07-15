@@ -12,7 +12,7 @@ import Recipe from '../Recipe/Recipe'
 // import { randomNum } from '../../util/helperFunctions'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
-import { WarningPrompt} from '../HelperComponents/HelperComponents'
+import { WarningPrompt } from '../HelperComponents/HelperComponents'
 
 function App () {
   // <Recipe drink={featured[22]} />

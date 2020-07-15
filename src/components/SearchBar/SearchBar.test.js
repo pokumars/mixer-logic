@@ -2,16 +2,16 @@ import React from 'react'
 import { SearchBar } from './SearchBar'
 import { render, screen } from '@testing-library/react'
 import { renderWithWrapper } from '../../setupTests'
-import { toHaveDisplayValue } from '@testing-library/jest-dom/matchers'
+//import { toHaveDisplayValue } from '@testing-library/jest-dom/matchers'
 
-expect.extend({ toHaveDisplayValue })
+//expect.extend({ toHaveDisplayValue })
 
 describe('<Searchbar> tests', () => {
   let component
 
-  beforeEach(() => {
+  /*beforeEach(() => {
     component = renderWithWrapper(<SearchBar />)
-  })
+  })*/
 
   test('adds 1 + 2 to equal 3', () => {
     expect(1 + 2).toBe(3)

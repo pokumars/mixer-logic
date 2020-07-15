@@ -3,13 +3,13 @@ import { render } from '@testing-library/react'
 import App from './App'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import uselessReducer from '../../reducers/uselessReducer'
+import searchReducer from '../../reducers/searchReducer'
 
 describe('<App /> Tests', () => {
   let component
 
   beforeEach(() => {
-    const store = createStore(uselessReducer)
+    const store = createStore(searchReducer)
     component = render(
       <Provider store={store}>
         <App />

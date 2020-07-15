@@ -3,12 +3,13 @@ import { drinks } from '../allDrinks'
 // search reducer sets the search criteria and
 // then drinks reducer does the search
 
-const FIND_BY_NAME = 'FIND_BY_NAME'
-const FIND_BY_METHOD = 'FIND_BY_METHOD'
+export const FIND_BY_NAME = 'FIND_BY_NAME'
+export const FIND_BY_METHOD = 'FIND_BY_METHOD'
 // const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
-const FIND_BY_ALCOHOL = 'FIND_BY_ALCOHOL'
-const noResults = 'There were no results. Try something different'
+export const FIND_BY_ALCOHOL = 'FIND_BY_ALCOHOL'
+export const noResults = 'There were no results. Try something different'
 
+// ---------------------REDUCER-----------------
 const searchReducer = (state = { res: [], empty: '' }, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
@@ -25,7 +26,7 @@ const searchReducer = (state = { res: [], empty: '' }, action) => {
   }
 }
 // if results ar e found do nothing else show results not found
-const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
+export const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
 
 // ---------------------ACTION CREATORS-----------------
 export const findDrinksByName = (searchText) => {
