@@ -29,6 +29,29 @@ const drinks = [
     ]    
   },
   {
+    name: "test DrinkName",
+    ingredients: [
+      ["testIngredientName",4, "unit"],
+      ["testIngredientName",4, "unit"],
+      ["testFresh ginger", null, null],
+      ["testSalt", null, "pinch"],
+    ],
+    imageUrl:"vodkaMartini.jpg",
+    glass: "testGlassType",
+    method: ["testMethod1","testMethod2"],
+    garnish: ["testGarnish1","testGarnish2"],
+    categories: ["testCategory1", "testCategory2"],
+    page: 1,
+    credits:[["testEntity1", "xforWhatImg"], ["testEntity2", "xforWhat"]],
+    steps: [
+     "testStep1",
+     "testStep2",
+     "testStep3",
+     "testStep4",
+     "testStep5"
+    ]    
+  },
+  {
     name: 'Vodka Martini',
     dummyId: 1,
     ingredients: [

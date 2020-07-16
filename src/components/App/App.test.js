@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import searchReducer from '../../reducers/searchReducer'
 
-describe('<App /> Tests', () => {
+describe.skip('<App /> Tests', () => {
   let component
 
   beforeEach(() => {

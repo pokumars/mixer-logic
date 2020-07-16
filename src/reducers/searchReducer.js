@@ -13,8 +13,11 @@ export const noResults = 'There were no results. Try something different'
 const searchReducer = (state = { res: [], empty: '' }, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
+      const foundDrinks = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
+      const empty = emptyResultsText(foundDrinks)
+      console.log(foundDrinks)
 
-      return action.data
+      return { res: foundDrinks, empty }
     case FIND_BY_METHOD:
       return action.data
 
@@ -25,18 +28,14 @@ const searchReducer = (state = { res: [], empty: '' }, action) => {
       return state
   }
 }
-// if results ar e found do nothing else show results not found
+// if results are found do nothing else show results not found
 export const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
 
 // ---------------------ACTION CREATORS-----------------
 export const findDrinksByName = (searchText) => {
-  const foundDrinks = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1)
-  const empty = emptyResultsText(foundDrinks)
-
-  console.log(foundDrinks)
   return {
     type: FIND_BY_NAME,
-    data: { res: foundDrinks, empty }
+    query: searchText
   }
 }
 
@@ -59,7 +58,7 @@ const deepSearch = (arr, criteria, query) => {
       })
       break
     case FIND_BY_ALCOHOL:
-      console.log('searching by alcohol')
+      //console.log('searching by alcohol')
 
       arr.forEach(parent => {
         if (parent.alcohols.filter(alc => alc.toLowerCase().indexOf(query.toLowerCase()) !== -1).length > 0) {
@@ -72,7 +71,7 @@ const deepSearch = (arr, criteria, query) => {
       return results
   }
 
-  console.log(results.length)
+  //console.log(results.length)
   return results
 }
 export const findDrinksByMethod = (searchText) => {
@@ -80,7 +79,7 @@ export const findDrinksByMethod = (searchText) => {
   const foundDrinks = deepSearch(drinks, FIND_BY_METHOD, searchText)
   const empty = emptyResultsText(foundDrinks)
 
-  console.log('finding by method')
+  //console.log('finding by method')
   return {
     type: FIND_BY_METHOD,
     data: { res: foundDrinks, empty }
@@ -92,7 +91,7 @@ export const findDrinksByAlcohol = (searchText) => {
   const foundDrinks = deepSearch(drinks, FIND_BY_ALCOHOL, searchText)
   const empty = emptyResultsText(foundDrinks)
 
-  console.log('finding by alcohol')
+  //console.log('finding by alcohol')
   return {
     type: FIND_BY_ALCOHOL,
     data: { res: foundDrinks, empty }
