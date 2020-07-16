@@ -18,6 +18,7 @@ const drinks = [
     method: ["method1","method2"],
     garnish: ["garnish1","garnish2"],
     categories: ["category1", "category2"],
+    alcohols: ['alcohol1', 'alcohol2'],
     page: 1,
     credits:[["entity1", "forWhatImg"], ["entity1", "forWhat"]],
     steps: [
@@ -41,6 +42,7 @@ const drinks = [
     method: ["testMethod1","testMethod2"],
     garnish: ["testGarnish1","testGarnish2"],
     categories: ["testCategory1", "testCategory2"],
+    alcohols: ['testAlcohol1', 'testAlcohol2'],
     page: 1,
     credits:[["testEntity1", "xforWhatImg"], ["testEntity2", "xforWhat"]],
     steps: [

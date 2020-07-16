@@ -7,29 +7,36 @@ export const FIND_BY_NAME = 'FIND_BY_NAME'
 export const FIND_BY_METHOD = 'FIND_BY_METHOD'
 // const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 export const FIND_BY_ALCOHOL = 'FIND_BY_ALCOHOL'
-export const noResults = 'There were no results. Try something different'
+
 
 // ---------------------REDUCER-----------------
 const searchReducer = (state = { res: [], empty: '' }, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
-      const foundDrinks = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
-      const empty = emptyResultsText(foundDrinks)
-      console.log(foundDrinks)
+      const drinksFoundByName = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
+      //console.log(drinksFoundByName)
+      return { res: drinksFoundByName, empty: emptyResultsText(drinksFoundByName) }
 
-      return { res: foundDrinks, empty }
     case FIND_BY_METHOD:
-      return action.data
+      // searches for full text && also search for partial text match
+      const drinksFoundByMethod = deepSearch(drinks, FIND_BY_METHOD, action.query)
+      //console.log(drinksFoundByMethod)
+      console.log(action.query)
+      return { res: drinksFoundByMethod, empty: emptyResultsText(drinksFoundByMethod) }
 
-    case FIND_BY_ALCOHOL:
+      case FIND_BY_ALCOHOL:
+        // searches for full text && also search for partial text match
+        const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, action.query)
+        //console.log(drinksFoundByAlcohol)
+        console.log(action.query)
+        return { res: drinksFoundByAlcohol, empty: emptyResultsText(drinksFoundByAlcohol) }
+  
 
-      return action.data
     default:
       return state
   }
 }
-// if results are found do nothing else show results not found
-export const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
+
 
 // ---------------------ACTION CREATORS-----------------
 export const findDrinksByName = (searchText) => {
@@ -38,6 +45,27 @@ export const findDrinksByName = (searchText) => {
     query: searchText
   }
 }
+
+export const findDrinksByMethod = (searchText) => {
+  //console.log('finding by method')
+  return {
+    type: FIND_BY_METHOD,
+    query: searchText
+  }
+}
+
+export const findDrinksByAlcohol = (searchText) => {
+  //console.log('finding by alcohol')
+  return {
+    type: FIND_BY_ALCOHOL,
+    query: searchText
+  }
+}
+
+// ---------------------HELPER FUNCTIONS-----------------
+export const noResults = 'There were no results. Try something different'
+// if results are found do nothing else show results not found
+export const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
 
 const deepSearch = (arr, criteria, query) => {
   // Search array of arrays containing text for partial or full match of the text
@@ -58,7 +86,7 @@ const deepSearch = (arr, criteria, query) => {
       })
       break
     case FIND_BY_ALCOHOL:
-      //console.log('searching by alcohol')
+      console.log('searching by alcohol')
 
       arr.forEach(parent => {
         if (parent.alcohols.filter(alc => alc.toLowerCase().indexOf(query.toLowerCase()) !== -1).length > 0) {
@@ -73,29 +101,6 @@ const deepSearch = (arr, criteria, query) => {
 
   //console.log(results.length)
   return results
-}
-export const findDrinksByMethod = (searchText) => {
-  // searches for full text && also search for partial text match
-  const foundDrinks = deepSearch(drinks, FIND_BY_METHOD, searchText)
-  const empty = emptyResultsText(foundDrinks)
-
-  //console.log('finding by method')
-  return {
-    type: FIND_BY_METHOD,
-    data: { res: foundDrinks, empty }
-  }
-}
-
-export const findDrinksByAlcohol = (searchText) => {
-  // searches for full text && also search for partial text match
-  const foundDrinks = deepSearch(drinks, FIND_BY_ALCOHOL, searchText)
-  const empty = emptyResultsText(foundDrinks)
-
-  //console.log('finding by alcohol')
-  return {
-    type: FIND_BY_ALCOHOL,
-    data: { res: foundDrinks, empty }
-  }
 }
 
 export default searchReducer
