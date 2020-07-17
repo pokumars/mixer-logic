@@ -55,7 +55,44 @@ const testMultipleResult = [
     ]    
   } 
 ]
-describe('FIND_BY_NAME action creator tests', () => {
+describe('action creator tests', () => {
+  const testQuery = "test"
+  it('FIND_BY_NAME creates an action that has the search query ', () => {
+    const expectedAction = {
+      type: FIND_BY_NAME,
+      query: testQuery
+    }
+    expect(findDrinksByName(testQuery)).toBeDefined()
+    expect(findDrinksByName(testQuery).query).toEqual(testQuery)
+    expect(findDrinksByName(testQuery)).toEqual(expectedAction)
+    
+  })
+
+  it('FIND_BY_METHOD creates an action that has the search query ', () => {
+    const expectedAction = {
+      type: FIND_BY_METHOD,
+      query: testQuery
+    }
+    expect(findDrinksByMethod(testQuery)).toBeDefined()
+    expect(findDrinksByMethod(testQuery).query).toEqual(testQuery)
+    expect(findDrinksByMethod(testQuery)).toEqual(expectedAction)
+    
+  })
+
+  it('FIND_BY_ALCOHOL creates an action that has the search query ', () => {
+    const expectedAction = {
+      type: FIND_BY_ALCOHOL,
+      query: testQuery
+    }
+    expect(findDrinksByAlcohol(testQuery)).toBeDefined()
+    expect(findDrinksByAlcohol(testQuery).query).toEqual(testQuery)
+    expect(findDrinksByAlcohol(testQuery)).toEqual(expectedAction)
+    
+  })
+})
+
+// ---------------------REDUCER TESTS-----------------
+describe.skip('FIND_BY_NAME action creator tests', () => {
 
   it('should find one drink by name', () => {
     const res = [testSingleResult]
@@ -97,7 +134,7 @@ describe('FIND_BY_NAME action creator tests', () => {
   })
 })
 
-describe('FIND_BY_METHOD action creator tests', () => {
+describe.skip('FIND_BY_METHOD action creator tests', () => {
   it('should find one drink by method', () => {
     const res = [testSingleResult]
     const empty = emptyResultsText(res)
