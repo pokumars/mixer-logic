@@ -14,20 +14,16 @@ const searchReducer = (state = { res: [], empty: '' }, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
       const drinksFoundByName = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
-      //console.log(drinksFoundByName)
       return { res: drinksFoundByName, empty: emptyResultsText(drinksFoundByName) }
 
     case FIND_BY_METHOD:
       // searches for full text && also search for partial text match
       const drinksFoundByMethod = deepSearch(drinks, FIND_BY_METHOD, action.query)
-      //console.log(drinksFoundByMethod)
-      console.log(action.query)
       return { res: drinksFoundByMethod, empty: emptyResultsText(drinksFoundByMethod) }
 
     case FIND_BY_ALCOHOL:
       // searches for full text && also search for partial text match
       const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, action.query)
-      //console.log(drinksFoundByAlcohol)
       console.log(action.query)
       return { res: drinksFoundByAlcohol, empty: emptyResultsText(drinksFoundByAlcohol) }
   

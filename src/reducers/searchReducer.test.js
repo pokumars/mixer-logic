@@ -1,6 +1,5 @@
 import searchReducer, { findDrinksByName, findDrinksByMethod, findDrinksByAlcohol, emptyResultsText,
   FIND_BY_NAME, FIND_BY_ALCOHOL, FIND_BY_METHOD } from "./searchReducer";
-import reducer from "./searchReducer";
 
 
 // ---------------------ACTION CREATORS-----------------
@@ -110,17 +109,16 @@ describe('FIND_BY_NAME reducer tests', () => {
       type: FIND_BY_NAME,
       query: "test"
     }) //returns an object with keys res:[{},{}] and empty:''
-    console.log(theReducer)
     const res = testSingleResult
     const empty = emptyResultsText(res)
 
     expect(theReducer).toBeDefined()
-    expect(theReducer).toEqual({ res: testSingleResult, empty: empty })
+    expect(theReducer).toEqual({ res: res, empty: empty })
     //the results I get is a subset of the results I expect to get
     expect(theReducer.res).toEqual(expect.arrayContaining(testSingleResult))
   })
 
-  it('should find multiple drinks by name', () => {
+  test('state should return multiple drinks by name', () => {
     const theReducer = searchReducer([], {
       type: FIND_BY_NAME,
       query: "drinkName"
@@ -130,14 +128,14 @@ describe('FIND_BY_NAME reducer tests', () => {
     const empty = emptyResultsText(res)
 
     expect(theReducer).toBeDefined()
-    expect(theReducer).toEqual({ res, empty })
+    expect(theReducer).toEqual({ res: res, empty:empty  })
     //the results I get is a subset of the results I expect to get
     expect(theReducer.res).toEqual(expect.arrayContaining(testMultipleResult))
     //if the expected drinks are a subset of the received, verify that the received contains only 2.
     expect(theReducer.res).toHaveLength(2)
   })
 
-  it('should find 0 drink by name', () => {
+  test('state should return 0 drink by name', () => {
     const theReducer = searchReducer([], {
       type: FIND_BY_NAME,
       query: "xg"
@@ -147,7 +145,7 @@ describe('FIND_BY_NAME reducer tests', () => {
     const empty = emptyResultsText(res)
 
     expect(theReducer).toBeDefined()
-    expect(theReducer).toEqual({ res, empty })
+    expect(theReducer).toEqual({ res: res, empty:empty  })
     //the results I get is a subset of the results I expect to get
     expect(theReducer.res).toEqual(expect.arrayContaining([]))
     //if the expected drinks are a subset of the received, verify that the received contains only 2.
@@ -155,30 +153,100 @@ describe('FIND_BY_NAME reducer tests', () => {
   })
 })
 
-describe.skip('FIND_BY_METHOD action creator tests', () => {
-  it('should find one drink by method', () => {
-    const res = [testSingleResult]
+describe('FIND_BY_METHOD reducer tests', () => {
+  test('state returns one drink by method', () => {
+    const theReducer = searchReducer([], {
+      type: FIND_BY_METHOD,
+      query: "testMeth"
+    })//returns an object with keys res:[{},{}] and empty:''
+
+    const res = testSingleResult
     const empty = emptyResultsText(res)
 
-    const expectedAction = {
-      type: FIND_BY_METHOD,
-      data: { res , empty }
-    }
-    expect(findDrinksByMethod("test")).toBeDefined()
-    expect(findDrinksByMethod("test")).toEqual(expectedAction)
-    
+    expect(theReducer).toBeDefined()
+    expect(theReducer).toEqual({ res: res, empty:empty })
+    //the results I get is a subset of the results I expect to get
+    expect(theReducer.res).toEqual(expect.arrayContaining(testSingleResult))
+    //if the expected drinks are a subset of the received, verify that the received contains only 2.
+    expect(theReducer.res).toHaveLength(1)
   })
-  it('returns empty [] when finding drink by method', () => {
-    const res = []
+
+  test('state returns multiple drinks by method', () => {
+    const theReducer = searchReducer([], {
+      type: FIND_BY_METHOD,
+      query: "meth"
+    })//returns an object with keys res:[{},{}] and empty:''
+
+    const res = testMultipleResult
     const empty = emptyResultsText(res)
 
-    const expectedAction = {
-      type: FIND_BY_METHOD,
-      data: { res , empty }
-    }
-    expect(findDrinksByMethod("xg")).toBeDefined()
-    expect(findDrinksByMethod("xg")).toEqual(expectedAction)
+    expect(theReducer).toBeDefined()
+    expect(theReducer).toEqual({ res: res, empty:empty })
+    //the results I get is a subset of the results I expect to get
+    expect(theReducer.res).toEqual(expect.arrayContaining(testMultipleResult))
+    //if the expected drinks are a subset of the received, verify that the received contains only 2.
+    expect(theReducer.res).toHaveLength(2)
   })
+
+  test('state returns empty [] when finding drink by method with impossible query', () => {
+    const theReducer = searchReducer([], {
+      type: FIND_BY_METHOD,
+      query: "xg"
+    })//searchReducer returns an object with keys res:[{},{}] and empty:''
+
+    expect(theReducer).toBeDefined()
+    expect(theReducer).toEqual(expect.arrayContaining([]))
+    expect(theReducer.res).toHaveLength(0)
+  })
+})
+
+describe('FIND_BY_ALCOHOL reducer tests', () => {
+  test('state returns multiple drinks by alcohol', () => {
+    const theReducer = searchReducer([], {
+      type: FIND_BY_ALCOHOL,
+      query: "alcoh"
+    })//returns an object with keys res:[{},{}] and empty:''
+
+    const res = testMultipleResult
+    const empty = emptyResultsText(res)
+
+    expect(theReducer).toBeDefined()
+    expect(theReducer).toEqual({ res: res, empty:empty })
+    //the results I get is a subset of the results I expect to get
+    expect(theReducer.res).toEqual(expect.arrayContaining(testMultipleResult))
+    //if the expected drinks are a subset of the received, verify that the received contains only 2.
+    expect(theReducer.res).toHaveLength(2)
+  })
+
+  test('state returns 1 drink by alcohol', () => {
+    const theReducer = searchReducer([], {
+      type: FIND_BY_ALCOHOL,
+      query: "testalc"
+    })//returns an object with keys res:[{},{}] and empty:''
+
+    const res = testSingleResult
+    const empty = emptyResultsText(res)
+
+    expect(theReducer).toBeDefined()
+    expect(theReducer).toEqual({ res: res, empty:empty })
+    //the results I get is a subset of the results I expect to get
+    expect(theReducer.res).toEqual(expect.arrayContaining(testSingleResult))
+    //if the expected drinks are a subset of the received, verify that the received contains only 2.
+    expect(theReducer.res).toHaveLength(1)
+  })
+
+  test('state returns 0 drinks by alcohol with impossible query', () => {
+    const theReducer = searchReducer([], {
+      type: FIND_BY_ALCOHOL,
+      query: "xg"
+    })//searchReducer returns an object with keys res:[{},{}] and empty:''
+
+    expect(theReducer).toBeDefined()
+    expect(theReducer).toEqual(expect.arrayContaining([]))
+    expect(theReducer.res).toHaveLength(0)
+  })
+
+  
 })
 
 
