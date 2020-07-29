@@ -52,9 +52,12 @@ designed magazine/booklet by [Finlandia Vodka](https://www.finlandia.com/en/) wi
 * [React](https://reactjs.org/)
 * [React-Router](https://reacttraining.com/react-router/)
 * [Redux](https://react-redux.js.org/)
-* [A bit of Jest](https://jestjs.io/)
+* [Jest](https://jestjs.io/)
+  * Redux testing
 
- ## Features
+
+
+ ## Features (user-facing)
  * Search by name
  * Search by mixing method
  * Randomly generated featured drinks

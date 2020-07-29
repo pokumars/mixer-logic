@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <p>By <a href ="https://github.com/pokumars" target="_blank" rel="noopener noreferrer"><b>Oheneba</b></a></p>
-      {// TODO: use InternalLink /> instaed of <a><a/> when you figure out what bug is causing issues
+      {// TODO: use InternalLink /> instead of <a><a/> when you figure out what bug is causing issues
         /** <InternalLink destination="/about" text="ABOUT" color="#f09b9b" bold={true}/> |
          *  <InternalLink destination="/contact" text="CONTACT" color="#f09b9b" bold={true}/> */
       }

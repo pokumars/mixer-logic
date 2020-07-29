@@ -12,7 +12,7 @@ const DrinkPreview = ({ drink }) => {
   }
 
   return (
-    <div className="drink-preview" onClick={toDrinkPage}>
+    <div className="drink-preview" data-testid="drink-preview"  onClick={toDrinkPage}>
       <div className="top-half">
         <div className="headers">
           <h1>{drink.name}</h1>

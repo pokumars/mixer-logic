@@ -7,10 +7,10 @@ export const FIND_BY_NAME = 'FIND_BY_NAME'
 export const FIND_BY_METHOD = 'FIND_BY_METHOD'
 // const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 export const FIND_BY_ALCOHOL = 'FIND_BY_ALCOHOL'
-
+export const initialState ={ res: [], empty: '' }
 
 // ---------------------REDUCER-----------------
-const searchReducer = (state = { res: [], empty: '' }, action) => {
+const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
       const drinksFoundByName = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
@@ -24,7 +24,7 @@ const searchReducer = (state = { res: [], empty: '' }, action) => {
     case FIND_BY_ALCOHOL:
       // searches for full text && also search for partial text match
       const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, action.query)
-      console.log(action.query)
+      //console.log(action.query)
       return { res: drinksFoundByAlcohol, empty: emptyResultsText(drinksFoundByAlcohol) }
   
     default:
@@ -81,7 +81,7 @@ const deepSearch = (arr, criteria, query) => {
       })
       break
     case FIND_BY_ALCOHOL:
-      console.log('searching by alcohol')
+      //console.log('searching by alcohol')
 
       arr.forEach(parent => {
         if (parent.alcohols.filter(alc => alc.toLowerCase().indexOf(query.toLowerCase()) !== -1).length > 0) {

@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux'
 import searchReducer from './reducers/searchReducer'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-const reducer = combineReducers({
+export const reducer = combineReducers({
   searchResults: searchReducer
 })
 

@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 
 export const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" data-testid="navbar">
       <div className="logo-container">
         <a href="/">
           <img className="logo" data-testid="logo" alt="cocktail glass"

@@ -1,24 +1,19 @@
 import React from 'react'
-import { render } from '@testing-library/react'
 import App from './App'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import searchReducer from '../../reducers/searchReducer'
+import { renderWithRedux } from '../../util/testHelpers'
 
-describe.skip('<App /> Tests', () => {
+describe('<App /> Tests', () => {
   let component
 
   beforeEach(() => {
-    const store = createStore(searchReducer)
-    component = render(
-      <Provider store={store}>
-        <App />
-      </Provider>)
+    component = renderWithRedux(<App />)
   })
 
-  test('renders component', () => {
-    const navbar = component.container.querySelector('.navbar')
+  it('navbar exists and displays logo', () => {
+    const navbar = component.getByTestId('navbar')
+
     expect(navbar).toBeDefined()
     expect(navbar).toHaveTextContent('mixer logic')
   })
+  
 })
