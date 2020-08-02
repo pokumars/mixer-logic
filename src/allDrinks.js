@@ -788,7 +788,7 @@ const drinks = [
 
 ]
 const  testSingleDrink=  [{
-  name: "test DrinkName",
+  name: "test DrinkName2",
   ingredients: [
     ["testIngredientName",4, "unit"],
     ["testIngredientName",4, "unit"],
@@ -814,7 +814,7 @@ const  testSingleDrink=  [{
 
 const testMultipleDrinks = [
   {
-    name: "drinkName",
+    name: "drinkName1",
     ingredients: [
       ["ingredientName",4, "unit"],
       ["ingredientName",4, "unit"],

@@ -1,18 +1,20 @@
 //TEST: that stuff is defined
-//TEST: that it does go to drink page when clicked on
 //TEST: drink name, "Ingredients", img, ingredients is correct
-//TEST: 
+//TEST: that on click, the function is called once
 
 import React from 'react'
 import DrinkPreview from './DrinkPreview'
-import { cleanup, render } from '@testing-library/react'
+import { cleanup, render, getByTestId, fireEvent, waitForElement, getByText } from '@testing-library/react'
 import { capitalise } from '../../util/helperFunctions'
 import { testSingleDrink } from "../../allDrinks";
+import { createMemoryHistory } from 'history'
+import { Router } from 'react-router-dom'
 
 //TODO: these tests must be made asynch when I move the drinks to a database
 afterEach(cleanup)
+const theDrink =testSingleDrink[0]
 describe('DrinkPreview Tests', () => {//different way of writing tests
-  const theDrink =testSingleDrink[0]
+  
 
   it('should be defined', () => {
     const { getByTestId }= render(<DrinkPreview drink={theDrink}/>)
@@ -36,3 +38,32 @@ describe('DrinkPreview Tests', () => {//different way of writing tests
   expect(getByAltText(theDrink.name).closest('img')).toHaveAttribute('src', `${theDrink.imageUrl}`)
   })
 })
+
+
+/*
+describe('navigation from <DrinkPreview />', () => {//should be done in app
+  //https://testing-library.com/docs/example-react-router
+  test('should ', async () => {
+    const history = createMemoryHistory()
+    const { container, getByTestId } = render(
+      <Router history={history}>
+        <DrinkPreview drink={theDrink}/>
+      </Router>
+    )
+    // verify page content for expected route
+    // often you'd use a data-testid or role query, but this is also possible
+    expect(container.innerHTML).toMatch(theDrink.name)
+    expect(container.innerHTML).toMatch("TestSalt")
+
+    fireEvent.click(getByTestId('drink-preview'))
+  
+    // check that the content changed to the new page
+    const theTestStep = await waitForElement(
+      () => getByText(container, 'testStep4'),
+      { container }
+    )
+    expect(theTestStep).toMatch('testStep4')
+  })
+  
+})*/
+
