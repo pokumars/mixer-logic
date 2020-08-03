@@ -34,8 +34,8 @@ const WarningPrompt = () => {
 
   // If the user closes the warning once, it should not have the warning open next time
   return (
-    closed ? <></> : <div className="warning">
-      <span className="closebtn" onClick={closeWarning}>&times;</span>
+    closed ? <></> : <div className="warning" data-testid="warning-prompt">
+      <span className="closebtn" data-testid="closebtn" onClick={closeWarning}>&times;</span>
       {message}
     </div>
   )
