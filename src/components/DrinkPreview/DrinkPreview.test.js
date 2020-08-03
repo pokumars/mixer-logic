@@ -1,14 +1,8 @@
-//TEST: that stuff is defined
-//TEST: drink name, "Ingredients", img, ingredients is correct
-//TEST: that on click, the function is called once
-
 import React from 'react'
 import DrinkPreview from './DrinkPreview'
-import { cleanup, render, getByTestId, fireEvent, waitForElement, getByText } from '@testing-library/react'
+import { cleanup, render } from '@testing-library/react'
 import { capitalise } from '../../util/helperFunctions'
 import { testSingleDrink } from "../../allDrinks";
-import { createMemoryHistory } from 'history'
-import { Router } from 'react-router-dom'
 
 //TODO: these tests must be made asynch when I move the drinks to a database
 afterEach(cleanup)
