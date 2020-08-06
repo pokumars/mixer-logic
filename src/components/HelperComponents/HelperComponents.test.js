@@ -2,7 +2,10 @@ import React from 'react'
 import { WarningPrompt } from './HelperComponents'
 import { render, cleanup, fireEvent } from "@testing-library/react";
 
-//TODO TEST: warning prompt should disappear when x is clicked
+//TODO TEST: does it render link
+//TODO TEST: does link have certain style 
+//TODO TEST: does link have certain style (color, bold) by default
+//TODO TEST: There should be a way to test that the navigate function is called
 afterEach(cleanup)
 describe('HelperComponets Tests', () => {
   test('should render a warning prompt', () => {

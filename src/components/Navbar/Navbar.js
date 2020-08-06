@@ -12,7 +12,7 @@ export const Navbar = () => {
           <span><b>mixer logic</b> </span>
         </a>
       </div>
-      <div className="navbar-buttons">
+      <div className="navbar-buttons" data-testid="navbar-buttons" style={{display: 'none'}}>
         <Button btnText="Sign In" btnColor="#05386B" handleClick={() => console.log(1)}/>
       </div>
 
