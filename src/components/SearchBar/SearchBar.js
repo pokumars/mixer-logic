@@ -46,12 +46,12 @@ export const SearchBar = () => {
     performSearchByCriteria()
     console.log('query and criteria atm ----->', criteria, query)
   }
-
+  //data-testid=""
   return (
-    <div className="search-bar">
+    <div className="search-bar" data-testid="search-bar">
       <div className="criteria" >
         <label htmlFor="searchCriteria">Search by </label>
-        <select name="searchCriteria"
+        <select name="searchCriteria" data-testid="search-criteria"
           id="searchCriteria" onChange={handleCriterionChange}>
           <option value="name">Name</option>
           <option value="method">Method</option>

@@ -4,13 +4,17 @@
  * - ingredients are all small case
  */
 
-
+ //By the two testdrinks not having a dummyid, I 
+ //can avoid showing the test drinks in the results altogether. As soon as I give
+ //them dummyIds they start being part of the search results
+//keywords: drinkName, test DrinkName
 const drinks = [
   {
     name: "drinkName",
+    dummyId: 6969,
     ingredients: [
-      ["ingredientName",4, "unit"],
-      ["ingredientName",4, "unit"],
+      ["ingredientName1",4, "unit"],
+      ["ingredientName2",4, "unit"],
       ["fresh ginger", null, null],
       ["salt", null, "pinch"],
     ],
@@ -32,9 +36,10 @@ const drinks = [
   },
   {
     name: "test DrinkName",
+    dummyId: 6970,
     ingredients: [
-      ["testIngredientName",4, "unit"],
-      ["testIngredientName",4, "unit"],
+      ["testIngredientName1",4, "unit"],
+      ["testIngredientName2",4, "unit"],
       ["testFresh ginger", null, null],
       ["testSalt", null, "pinch"],
     ],
@@ -789,6 +794,7 @@ const drinks = [
 ]
 const  testSingleDrink=  [{
   name: "test DrinkName2",
+  dummyId: 2,
   ingredients: [
     ["testIngredientName",4, "unit"],
     ["testIngredientName",4, "unit"],
@@ -815,6 +821,7 @@ const  testSingleDrink=  [{
 const testMultipleDrinks = [
   {
     name: "drinkName1",
+    dummyId: 1,
     ingredients: [
       ["ingredientName",4, "unit"],
       ["ingredientName",4, "unit"],

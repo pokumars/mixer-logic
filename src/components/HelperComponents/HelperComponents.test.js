@@ -1,6 +1,7 @@
 import React from 'react'
 import { WarningPrompt } from './HelperComponents'
 import { render, cleanup, fireEvent } from "@testing-library/react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 //TODO TEST: does it render link
 //TODO TEST: does link have certain style 

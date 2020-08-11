@@ -7,11 +7,13 @@ import './Recipe.css'
 
 const Recipe = ({ drinks }) => {
   // TODO: fix the condition to render the recipe/image credits
+  //console.log(window.location.href)
   const drinkId = useParams().id
   const drink = drinks.find(d => Number(d.dummyId) === Number(drinkId))
-
+  //console.log(drinks[0])
+  //console.log(drink)
   return (
-    <div className="recipe">
+    <div className="recipe" data-testid="recipe">
       {// TODO: this will be possible when i have the user sign in capability
       // <a ><b>+ Add to Favorites</b></a>
       }
@@ -24,13 +26,15 @@ const Recipe = ({ drinks }) => {
         </div>
         <div className="top-left">
 
-          <h2>{drink.name}</h2>
+          <h2 data-testid="drink-name-header">{drink.name}</h2>
           <h4>Ingredients</h4>
           <table>
             {drink.ingredients.map(i => { // i is ingredient 0=name 1=amount 2=unit
             // if amount exists put it else "", if unit exists put it else "", lastly put the name
               return <tbody key={i[0]}>
-                <td>{(i[1] ? i[1] : '') + ' ' + (i[2] ? i[2] : '')}</td> <td>{i[0]}</td>
+                <tr>
+                  <td>{(i[1] ? i[1] : '') + ' ' + (i[2] ? i[2] : '')}</td><td>{i[0]}</td>
+                </tr>
               </tbody>
             })}
           </table>
@@ -46,7 +50,7 @@ const Recipe = ({ drinks }) => {
 
         </div>
         <div className="bottom-right">
-          <div className="extra-details ">
+          <div className="extra-details">
             <span><b>Glass</b>: {capitalise(drink.glass)}</span><br />
             <span><b>Method</b>: {joinWithAnd(drink.method.map(m => capitalise(m)))}</span><br />
             <span><b>Garnish</b>: {joinWithAnd(drink.garnish.map(g => capitalise(g)))}</span><br />

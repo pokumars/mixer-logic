@@ -22,6 +22,7 @@ function App () {
   const featured = drinks
   // const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
 
+  
   return (
     <div className="App" data-testid="app">
       <div className="app-container">

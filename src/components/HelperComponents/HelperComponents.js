@@ -31,6 +31,7 @@ const WarningPrompt = () => {
     event.target.parentNode.style.display = 'none'
     localStorage.setItem(WARNING_STORE, true)
   }
+  //console.log(`warning button closed ------------------${closed}`)
 
   // If the user closes the warning once, it should not have the warning open next time
   return (
