@@ -4,7 +4,7 @@ import App from '../App/App'
 import { render, cleanup } from '@testing-library/react'
 import {drinks} from '../../allDrinks'
 import '@testing-library/jest-dom'
-import { renderWithRouterRedux } from '../../util/testHelpers'
+import { renderWithRouterRedux, renderWithMemoryRouterRedux } from '../../util/testHelpers'
 import {  MemoryRouter, Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 

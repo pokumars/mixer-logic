@@ -59,10 +59,10 @@ export const SearchBar = () => {
         </select>
       </div>
 
-      <form className="search" onSubmit={handleSearchSubmit}>
-        <input value={query} id="searchInput" onChange={handleQueryChange}
+      <form className="search" onSubmit={handleSearchSubmit} data-testid="search-form">
+        <input value={query} id="searchInput" data-testid="search-input" onChange={handleQueryChange}
           placeholder="Search..."/>
-        <Button btnText="Search" btnColor="#05386B"
+        <Button btnText="Search" btnColor="#05386B" 
           btnType="submit"
         />
       </form>

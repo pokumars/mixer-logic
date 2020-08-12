@@ -52,8 +52,10 @@ designed magazine/booklet by [Finlandia Vodka](https://www.finlandia.com/en/) wi
 * [React](https://reactjs.org/)
 * [React-Router](https://reacttraining.com/react-router/)
 * [Redux](https://react-redux.js.org/)
+* [React Testing Library](https://testing-library.com)
 * [Jest](https://jestjs.io/)
   * Redux testing
+  * [jest-dom](https://github.com/testing-library/jest-dom#jest-dom)
 
 
 
@@ -61,7 +63,7 @@ designed magazine/booklet by [Finlandia Vodka](https://www.finlandia.com/en/) wi
  * Search by name
  * Search by mixing method
  * Randomly generated featured drinks
- * To be added: Search by alcohol type
+ * Added: Search by alcohol type
  * To be added: Login
  * To be added: Save favourite drinks
  
