@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { reducer }  from '../store'
 import { initialState } from '../reducers/searchReducer'
 import { createMemoryHistory } from 'history'
-import { Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Router, Switch, Route, MemoryRouter } from 'react-router-dom'
 
 export const renderWithRedux = (component, { initialState, store = createStore(reducer, initialState) } = {}) => {
   return  {
@@ -37,46 +37,14 @@ export const renderWithRouterRedux= (component, { initialState, store = createSt
   }
 }
 
- /*export const renderWithRouterRedux= (component, location ='/', { initialState, store = createStore(reducer, initialState) } = {}) => {
-  const history = createMemoryHistory({initialEntries: [location]})
+export const renderWithMemoryRouterRedux= (component, { initialState, store = createStore(reducer, initialState) } = {}) => {
+
   return {
     ...render(<Provider store={store}>
-      <Router history={history}>
+      <MemoryRouter>
         {component}
-      </Router>
+      </MemoryRouter>
     </Provider>),
     store,
-  }
-}*/
-
-
-/*
-export const renderWithRouter = (component, location= "/")  => {
-  const history = createMemoryHistory({initialEntries: [location]})
-  return {
-    ...render(
-      <Router>
-        {component}
-      </Router>
-    )
-  }
-}
-*/
-
-//useless
-export const renderChildWithRouter = (component)  => {
-  const history = createMemoryHistory({
-    initialEntries: ['/drink/:id']
-  })
-  return {
-    ...render(
-      <Router>
-        <Switch>
-
-          <Route path="/drink/:id" component={component} />
-        </Switch>
-        
-      </Router>
-    )
   }
 }

@@ -7,7 +7,7 @@ import SearchResults from '../SearchResults/SearchResults'
 import FeaturedDrinks from '../FeaturedDrinks/FeaturedDrinks'
 import { Footer } from '../Footer/Footer'
 import { drinks } from '../../allDrinks'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {Switch, Route } from 'react-router-dom'
 import Recipe from '../Recipe/Recipe'
 // import { randomNum } from '../../util/helperFunctions'
 import About from '../About/About'
@@ -27,7 +27,7 @@ function App () {
     <div className="App" data-testid="app">
       <div className="app-container">
         <Navbar />
-        <Router>
+        
           <Switch>
             <Route path="/contact">
               <Contact />
@@ -55,7 +55,7 @@ i.e only show featured when search results are empty */
             </Route>
 
           </Switch>
-        </Router>
+        
       </div>
       <Footer />
     </div>

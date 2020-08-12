@@ -37,9 +37,7 @@ describe('<Searchbar> tests', () => {
     console.log(display.textContent);
 
     
-  })
-  
-  
+  }) 
 })
 
 // TEST TODO:
