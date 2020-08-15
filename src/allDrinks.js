@@ -11,7 +11,6 @@
 const drinks = [
   {
     name: "drinkName",
-    dummyId: 6969,
     ingredients: [
       ["ingredientName1",4, "unit"],
       ["ingredientName2",4, "unit"],
@@ -36,7 +35,6 @@ const drinks = [
   },
   {
     name: "test DrinkName",
-    dummyId: 6970,
     ingredients: [
       ["testIngredientName1",4, "unit"],
       ["testIngredientName2",4, "unit"],

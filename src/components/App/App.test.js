@@ -44,7 +44,7 @@ test('warning should be invisible', () => {
 
 test('should contain drink-specific texts in recipe', () => {
 
-  const { container, getAllByTestId, getByTestId } = renderWithMemoryRouterRedux(<App />)
+  const { container, getAllByTestId } = renderWithMemoryRouterRedux(<App />)
  
   fireEvent.click(getAllByTestId('drink-preview')[0])
   
@@ -66,6 +66,17 @@ test('should say no results when search results are empty', () => {
   expect(component.container).toHaveTextContent('There were no results. Try something different')
 })
 
+test('should not return the test drink objects', () => {
+  const component = renderWithMemoryRouterRedux(<App />)
+
+  const input = component.getByTestId('search-input')
+  const form = component.getByTestId('search-form')
+
+  fireEvent.change(input, { target: { value: 'drinkn' } })
+  fireEvent.submit(form)
+
+  expect(component.container).not.toHaveTextContent('drinkName')
+})
 test('show featured drinks when search results are empty', () => {
   const component = renderWithMemoryRouterRedux(<App />)
 

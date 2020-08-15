@@ -7,7 +7,6 @@ import searchReducer, { findDrinksByName, findDrinksByMethod, findDrinksByAlcoho
 // very distinct names from the rest of the objects
 const  testSingleResult=  [{
   name: "test DrinkName",
-  dummyId: 6970,
   ingredients: [
     ["testIngredientName1",4, "unit"],
     ["testIngredientName2",4, "unit"],
@@ -34,7 +33,6 @@ const  testSingleResult=  [{
 const testMultipleResult = [
   {
     name: "drinkName",
-    dummyId: 6969,
     ingredients: [
       ["ingredientName1",4, "unit"],
       ["ingredientName2",4, "unit"],

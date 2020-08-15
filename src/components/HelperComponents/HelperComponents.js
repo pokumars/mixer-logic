@@ -42,4 +42,17 @@ const WarningPrompt = () => {
   )
 }
 
-export { InternalLink, WarningPrompt }
+
+
+const NotFound = () => {
+  return (
+    <div className="not-found">
+      <img src={require('../../graphics/gifs/404-gif.gif')} alt="404 gif" ></img>
+      <h1>404 not found</h1>
+      <p>go back or go to <InternalLink destination="/" text="homepage" /></p>
+    </div>
+  )
+}
+
+
+export { InternalLink, WarningPrompt, NotFound }
