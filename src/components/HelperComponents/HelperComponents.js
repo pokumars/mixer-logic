@@ -31,14 +31,28 @@ const WarningPrompt = () => {
     event.target.parentNode.style.display = 'none'
     localStorage.setItem(WARNING_STORE, true)
   }
+  //console.log(`warning button closed ------------------${closed}`)
 
   // If the user closes the warning once, it should not have the warning open next time
   return (
-    closed ? <></> : <div className="warning">
-      <span className="closebtn" onClick={closeWarning}>&times;</span>
+    closed ? <></> : <div className="warning" data-testid="warning-prompt">
+      <span className="closebtn" data-testid="closebtn" onClick={closeWarning}>&times;</span>
       {message}
     </div>
   )
 }
 
-export { InternalLink, WarningPrompt }
+
+
+const NotFound = () => {
+  return (
+    <div className="not-found">
+      <img src={require('../../graphics/gifs/404-gif.gif')} alt="404 gif" ></img>
+      <h1>404 not found</h1>
+      <p>go back or go to <InternalLink destination="/" text="homepage" /></p>
+    </div>
+  )
+}
+
+
+export { InternalLink, WarningPrompt, NotFound }

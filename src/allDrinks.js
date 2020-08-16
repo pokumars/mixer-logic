@@ -4,12 +4,16 @@
  * - ingredients are all small case
  */
 
+ //By the two testdrinks not having a dummyid, I 
+ //can avoid showing the test drinks in the results altogether. As soon as I give
+ //them dummyIds they start being part of the search results
+//keywords: drinkName, test DrinkName
 const drinks = [
   {
     name: "drinkName",
     ingredients: [
-      ["ingredientName",4, "unit"],
-      ["ingredientName",4, "unit"],
+      ["ingredientName1",4, "unit"],
+      ["ingredientName2",4, "unit"],
       ["fresh ginger", null, null],
       ["salt", null, "pinch"],
     ],
@@ -32,8 +36,8 @@ const drinks = [
   {
     name: "test DrinkName",
     ingredients: [
-      ["testIngredientName",4, "unit"],
-      ["testIngredientName",4, "unit"],
+      ["testIngredientName1",4, "unit"],
+      ["testIngredientName2",4, "unit"],
       ["testFresh ginger", null, null],
       ["testSalt", null, "pinch"],
     ],
@@ -786,5 +790,59 @@ const drinks = [
   }
 
 ]
+const  testSingleDrink=  [{
+  name: "test DrinkName2",
+  dummyId: 2,
+  ingredients: [
+    ["testIngredientName",4, "unit"],
+    ["testIngredientName",4, "unit"],
+    ["testFresh ginger", null, null],
+    ["testSalt", null, "pinch"],
+  ],
+  imageUrl:"vodkaMartini.jpg",
+  glass: "testGlassType",
+  method: ["testMethod1","testMethod2"],
+  garnish: ["testGarnish1","testGarnish2"],
+  categories: ["testCategory1", "testCategory2"],
+  alcohols: ['testAlcohol1', 'testAlcohol2'],
+  page: 1,
+  credits:[["testEntity1", "xforWhatImg"], ["testEntity2", "xforWhat"]],
+  steps: [
+   "testStep1",
+   "testStep2",
+   "testStep3",
+   "testStep4",
+   "testStep5"
+  ]    
+}]
 
-module.exports = { drinks }
+const testMultipleDrinks = [
+  {
+    name: "drinkName1",
+    dummyId: 1,
+    ingredients: [
+      ["ingredientName",4, "unit"],
+      ["ingredientName",4, "unit"],
+      ["fresh ginger", null, null],
+      ["salt", null, "pinch"],
+    ],
+    imageUrl:"vodkaMartini.jpg",
+    glass: "glassType",
+    method: ["method1","method2"],
+    garnish: ["garnish1","garnish2"],
+    categories: ["category1", "category2"],
+    alcohols: ['alcohol1', 'alcohol2'],
+    page: 1,
+    credits:[["entity1", "forWhatImg"], ["entity1", "forWhat"]],
+    steps: [
+     "step1",
+     "step2",
+     "step3",
+     "step4",
+     "step5"
+    ]    
+  },
+  ...testSingleDrink
+]
+
+module.exports = { drinks, testSingleDrink, testMultipleDrinks }

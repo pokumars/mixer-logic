@@ -13,7 +13,17 @@ const joinWithAnd = (stringArr) => { // join array of strings with commas and ad
   }
 }
 const randomNum = (maxNum) => Math.floor(Math.random() * Math.floor(maxNum))
-export { capitalise, joinWithAnd, randomNum }
+
+const gen3UniqueRandomNums = (arr) => { // generate 3 unique numbers
+  const randomNums = []
+  while (randomNums.length < 3) { // generate random numbers and if they dont already exist in arr, add them else skip.
+    const r = randomNum(arr.length)
+    if (randomNums.indexOf(r) === -1) randomNums.push(r)
+  }
+  return randomNums
+}
+
+export { capitalise, joinWithAnd, randomNum, gen3UniqueRandomNums }
 
 // example drink object
 /* const exampleDrink =   {

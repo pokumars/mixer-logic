@@ -7,31 +7,26 @@ export const FIND_BY_NAME = 'FIND_BY_NAME'
 export const FIND_BY_METHOD = 'FIND_BY_METHOD'
 // const FIND_BY_INGREDIENT= "FIND_BY_INGREDIENT";
 export const FIND_BY_ALCOHOL = 'FIND_BY_ALCOHOL'
-
+export const initialState ={ res: [], empty: '' }
 
 // ---------------------REDUCER-----------------
-const searchReducer = (state = { res: [], empty: '' }, action) => {
+const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
       const drinksFoundByName = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
-      //console.log(drinksFoundByName)
       return { res: drinksFoundByName, empty: emptyResultsText(drinksFoundByName) }
 
     case FIND_BY_METHOD:
       // searches for full text && also search for partial text match
       const drinksFoundByMethod = deepSearch(drinks, FIND_BY_METHOD, action.query)
-      //console.log(drinksFoundByMethod)
-      console.log(action.query)
       return { res: drinksFoundByMethod, empty: emptyResultsText(drinksFoundByMethod) }
 
-      case FIND_BY_ALCOHOL:
-        // searches for full text && also search for partial text match
-        const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, action.query)
-        //console.log(drinksFoundByAlcohol)
-        console.log(action.query)
-        return { res: drinksFoundByAlcohol, empty: emptyResultsText(drinksFoundByAlcohol) }
+    case FIND_BY_ALCOHOL:
+      // searches for full text && also search for partial text match
+      const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, action.query)
+      //console.log(action.query)
+      return { res: drinksFoundByAlcohol, empty: emptyResultsText(drinksFoundByAlcohol) }
   
-
     default:
       return state
   }
@@ -63,9 +58,12 @@ export const findDrinksByAlcohol = (searchText) => {
 }
 
 // ---------------------HELPER FUNCTIONS-----------------
+/*The only scenario where the no results text will fail to give the message of no results is
+when the only results are the 2 with no dummyId property i.e the test drink objects.
+If it doesnt show no results message, this should be the only reason why*/
 export const noResults = 'There were no results. Try something different'
 // if results are found do nothing else show results not found
-export const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
+export const emptyResultsText = (arr) => arr.length < 1 ? noResults : '' 
 
 const deepSearch = (arr, criteria, query) => {
   // Search array of arrays containing text for partial or full match of the text
@@ -86,7 +84,7 @@ const deepSearch = (arr, criteria, query) => {
       })
       break
     case FIND_BY_ALCOHOL:
-      console.log('searching by alcohol')
+      //console.log('searching by alcohol')
 
       arr.forEach(parent => {
         if (parent.alcohols.filter(alc => alc.toLowerCase().indexOf(query.toLowerCase()) !== -1).length > 0) {

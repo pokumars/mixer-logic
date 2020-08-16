@@ -35,7 +35,7 @@ export const SearchBar = () => {
 
   const handleQueryChange = (event) => {
     setQuery(event.target.value)
-    console.log(event.target.value)
+    //console.log(event.target.value)
   }
 
   const handleSearchSubmit = (event) => {
@@ -44,14 +44,14 @@ export const SearchBar = () => {
 
     // search is done based on what the criteria is  atm
     performSearchByCriteria()
-    console.log('query and criteria atm ----->', criteria, query)
+    //console.log('query and criteria atm ----->', criteria, query)
   }
-
+  //data-testid=""
   return (
-    <div className="search-bar">
+    <div className="search-bar" data-testid="search-bar">
       <div className="criteria" >
         <label htmlFor="searchCriteria">Search by </label>
-        <select name="searchCriteria"
+        <select name="searchCriteria" data-testid="search-criteria"
           id="searchCriteria" onChange={handleCriterionChange}>
           <option value="name">Name</option>
           <option value="method">Method</option>
@@ -59,10 +59,10 @@ export const SearchBar = () => {
         </select>
       </div>
 
-      <form className="search" onSubmit={handleSearchSubmit}>
-        <input value={query} id="searchInput" onChange={handleQueryChange}
+      <form className="search" onSubmit={handleSearchSubmit} data-testid="search-form">
+        <input value={query} id="searchInput" data-testid="search-input" onChange={handleQueryChange}
           placeholder="Search..."/>
-        <Button btnText="Search" btnColor="#05386B"
+        <Button btnText="Search" btnColor="#05386B" testId="search-submit"
           btnType="submit"
         />
       </form>

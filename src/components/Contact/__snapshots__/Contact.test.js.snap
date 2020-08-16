@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="contact"
+  >
+    <h2
+      class="my-name"
+    >
+      Oheneba Poku-Marboah
+    </h2>
+    <div
+      class="socials"
+    >
+      <a
+        class="contact-element"
+        href="https://www.linkedin.com/in/oheneba-poku-marboah-483783173/"
+      >
+        <img
+          alt="linkedin"
+          src="[object Object]"
+        />
+        <strong>
+          LinkedIn
+        </strong>
+      </a>
+      <a
+        class="contact-element"
+        href="https://github.com/pokumars"
+      >
+        <img
+          alt="github"
+          src="[object Object]"
+        />
+        <strong>
+          GitHub
+        </strong>
+      </a>
+    </div>
+    <div
+      class="my-email contact-element"
+    >
+      <img
+        alt="cv"
+        src="[object Object]"
+      />
+      <p>
+        Shoot me some feedback @ ohenebakob@yahoo.com
+      </p>
+    </div>
+    <div
+      class="my-cv contact-element"
+    >
+      <img
+        alt="cv"
+        src="[object Object]"
+      />
+      <p>
+        <a
+          href="cv_oheneba_pokumarboah.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          curriculum vitae
+        </a>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,24 +1,46 @@
 import React from 'react'
 import { SearchBar } from './SearchBar'
-import { render, screen } from '@testing-library/react'
-import { renderWithWrapper } from '../../setupTests'
-//import { toHaveDisplayValue } from '@testing-library/jest-dom/matchers'
+import { render, screen, fireEvent, getAllByRole } from '@testing-library/react'
+import { renderWithRedux } from '../../util/testHelpers'
 
-//expect.extend({ toHaveDisplayValue })
 
 describe('<Searchbar> tests', () => {
-  let component
 
-  /*beforeEach(() => {
-    component = renderWithWrapper(<SearchBar />)
-  })*/
-
-  test('adds 1 + 2 to equal 3', () => {
-    expect(1 + 2).toBe(3)
+  test('<Searchbar> runs without crashing ', () => {
+    renderWithRedux(<SearchBar />)
   })
+  test('should have name as the default dropdown option', () => {
+    const { getByTestId } =  renderWithRedux(<SearchBar />)
+    const dropdown = getByTestId('search-criteria')
+    //console.log(dropdown.children[0].text)
+    const display = dropdown.children[0];
+
+    expect(display.textContent).toBe('Name');   
+  })
+
+  test.skip('should change to Alcohol/Spirit', () => {
+    const { getByTestId, getByText } =  renderWithRedux(<SearchBar />)
+    const dropdown = getByTestId('search-criteria')
+   
+    const display = dropdown.children[0];
+
+    fireEvent.click(dropdown);
+    //screen.debug(screen.getByTestId('search-criteria'))
+
+    const dropdownOptions = getAllByRole(dropdown, 'option');
+    console.log(dropdownOptions[2].text)
+
+    //fireEvent.click(dropdownOptions[2]);
+    fireEvent.click(getByText('Alcohol/Spirit'));
+    expect(display.textContent).toBe('Alcohol/Spirit');
+
+    console.log(display.textContent);
+
+    
+  }) 
 })
 
-//
+// TEST TODO:
 // clicking criteria opens dropdown
 // clicking dropdown option runs function once
 // clicking dropdown option sets store value to right thing

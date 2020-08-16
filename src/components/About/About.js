@@ -50,7 +50,9 @@ const About = () => {
         <li><a href="https://reactjs.org/">React</a></li>
         <li><a href="https://reacttraining.com/react-router/">React-Router</a></li>
         <li><a href="https://react-redux.js.org/">Redux</a></li>
-        <li><a href="https://jestjs.io/">A bit of Jest</a></li>
+        <li><a href="https://jestjs.io/">Jest</a></li>
+        <li><a href="https://testing-library.com/">React Testing Library</a></li>
+        <li><a href="https://jestjs.io/">Jest</a></li>
       </ul>
 
       <h2 id="features">Features</h2>
