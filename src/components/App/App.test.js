@@ -34,6 +34,19 @@ describe('<App /> Tests', () => {
 })
  */
 
+ 
+test('should not return the test drink objects', () => {
+  const component = renderWithMemoryRouterRedux(<App />)
+
+  const input = component.getByTestId('search-input')
+  const form = component.getByTestId('search-form')
+
+  fireEvent.change(input, { target: { value: 'drinkn' } })
+  fireEvent.submit(form)
+
+  expect(component.container).not.toHaveTextContent('drinkName')
+})
+
 test('warning should be invisible', () => {
   const component = renderWithRouterRedux(<App />)
   
@@ -66,17 +79,6 @@ test('should say no results when search results are empty', () => {
   expect(component.container).toHaveTextContent('There were no results. Try something different')
 })
 
-test('should not return the test drink objects', () => {
-  const component = renderWithMemoryRouterRedux(<App />)
-
-  const input = component.getByTestId('search-input')
-  const form = component.getByTestId('search-form')
-
-  fireEvent.change(input, { target: { value: 'drinkn' } })
-  fireEvent.submit(form)
-
-  expect(component.container).not.toHaveTextContent('drinkName')
-})
 test('show featured drinks when search results are empty', () => {
   const component = renderWithMemoryRouterRedux(<App />)
 
@@ -91,7 +93,7 @@ test('show featured drinks when search results are empty', () => {
   expect(component.getAllByText('Ingredients')).toHaveLength(3)
 })
 
-test('does not show featured drinks when thee are results', () => {
+test('does not show featured drinks when there are results', () => {
   const component = renderWithMemoryRouterRedux(<App />)
 
   const input = component.getByTestId('search-input')

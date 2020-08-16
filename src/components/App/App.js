@@ -17,11 +17,13 @@ import { WarningPrompt, NotFound } from '../HelperComponents/HelperComponents'
 function App () {
   // <Recipe drink={featured[22]} />
   /* all drinks should be separate from searchResults because featured takes from all drinks and search results are search results. */
-  const searchRes = useSelector(state => state.searchResults.res)
+  /*What is happening here: test drinks dont have dummyId so we do the filter to eliminate them from the search results */
+  const searchRes = useSelector(state => state.searchResults.res).filter(d =>d.hasOwnProperty('dummyId'))
   const noResultsString = useSelector(state => state.searchResults.empty)
-  const featured = drinks
+  /*What is happening here: test drinks dont have dummyId so we do the filter to eliminate them from the potential featured drinks */
+  const featured = drinks.filter(d =>d.hasOwnProperty('dummyId'))
   // const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
-
+  
   
   return (
     <div className="App" data-testid="app">

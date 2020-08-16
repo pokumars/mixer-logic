@@ -58,9 +58,12 @@ export const findDrinksByAlcohol = (searchText) => {
 }
 
 // ---------------------HELPER FUNCTIONS-----------------
+/*The only scenario where the no results text will fail to give the message of no results is
+when the only results are the 2 with no dummyId property i.e the test drink objects.
+If it doesnt show no results message, this should be the only reason why*/
 export const noResults = 'There were no results. Try something different'
 // if results are found do nothing else show results not found
-export const emptyResultsText = (arr) => arr.length < 1 ? noResults : ''
+export const emptyResultsText = (arr) => arr.length < 1 ? noResults : '' 
 
 const deepSearch = (arr, criteria, query) => {
   // Search array of arrays containing text for partial or full match of the text

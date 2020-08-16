@@ -20,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update": "surge --domain mixer-logic.surge.sh/",
-    "deploy": "npm run build && cd build && cp index.html 200.html && npm run update"
+    "deploy": "npm run build && cd build && cp index.html 200.html && npm run update",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +43,7 @@
   "author": "Oheneba Poku-Marboah",
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^4.12.1",
     "redux-devtools-extension": "^2.13.8"
   }
 }
