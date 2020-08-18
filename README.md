@@ -29,6 +29,10 @@ There is a randomly generated list of featured drinks whenever there has been no
 |-------------|
 ![search demo desktop](https://user-images.githubusercontent.com/33485810/86541209-cba39280-bf13-11ea-8734-f64b323cb1f3.gif)
 
+| Test coverage |
+|-------------|
+![mixer-logic p1 testCoverage](https://user-images.githubusercontent.com/33485810/90562858-8e395280-e1ab-11ea-994c-728e31d8bf39.png)
+
 ## Motivation
  I decided I needed to build more personal projects to get better at the tools
  and frameworks that are used in the industry.
@@ -54,8 +58,9 @@ designed magazine/booklet by [Finlandia Vodka](https://www.finlandia.com/en/) wi
 * [Redux](https://react-redux.js.org/)
 * [React Testing Library](https://testing-library.com)
 * [Jest](https://jestjs.io/)
-  * Redux testing
+  * Redux tests
   * [jest-dom](https://github.com/testing-library/jest-dom#jest-dom)
+* [Cypress end to end tests](https://www.cypress.io/)
 
 
 
