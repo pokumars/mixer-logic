@@ -7,7 +7,9 @@ CONTENTS OF THIS FILE
  * Motivation
  * Packages/frameworks used
  * Features
- 
+
+[Live demo online](http://mixer-logic.surge.sh)
+
 ## Introduction
 [Mixer-logic](http://mixer-logic.surge.sh) is a webpage (SPA) that can be used to search for different cocktails and their recipes. The search can be done based on name, method and in the future what alcohols it contains.
 
