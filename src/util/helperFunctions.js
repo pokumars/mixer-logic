@@ -31,19 +31,19 @@ export { capitalise, joinWithAnd, randomNum, gen3UniqueRandomNums }
   name: "drinkName",
   dummyId: 0,
   ingredients: [
-    ["ingredientName",4, "unit"],
-    ["ingredientName",4, "unit"],
+    ["ingredientName", 4, "unit"],
+    ["rum", 4, "cl"],
     ["fresh ginger", null, null],
     ["salt", null, "pinch"],
   ],
-  imageUrl:"vodkaMartini.jpg",
+  imageUrl:"drinkImageUrl.jpg",
   glass: "glassType",
   method: ["method1","method2"],
   garnish: ["garnish1","garnish2"],
   categories: ["category1", "category2"],
-  liquor: [liquor1, liquor 2]
+  liquor: ["liquor1", "liquor2"]
   page: 1,
-  credits:[["entity1", "forWhatImg"], ["entity1", "forWhat"]],
+  credits:[["entity1", "imageCredit"], ["entity2", "recipeCredit"]],
   steps: [
    "step1",
    "step2",

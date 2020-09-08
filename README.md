@@ -13,6 +13,8 @@ CONTENTS OF THIS FILE
 ## Introduction
 [Mixer-logic](http://mixer-logic.surge.sh) is a webpage (SPA) that can be used to search for different cocktails and their recipes. The search can be done based on name, method and in the future what alcohols it contains.
 
+[Static Frontend on AWS](https://completephase1.dw8oebx33y2ox.amplifyapp.com/)
+
 ## How to use?
 On the page, the user selects what criteria they want to search by, name or method, and they type in their search query into the search bar and voilà, cocktail results. 
 There is a randomly generated list of featured drinks whenever there has been no search done or there were no results returned for what the user searched.
@@ -74,3 +76,8 @@ designed magazine/booklet by [Finlandia Vodka](https://www.finlandia.com/en/) wi
  * To be added: Login
  * To be added: Save favourite drinks
  
+
+
+## Phases of development
+* [Phase 1 - Static frontend site](http://mixer-logic.surge.sh/) --- [Backup deployment on AWS](https://completephase1.dw8oebx33y2ox.amplifyapp.com/)
+

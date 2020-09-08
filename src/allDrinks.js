@@ -4,10 +4,11 @@
  * - ingredients are all small case
  */
 
- //By the two testdrinks not having a dummyid, I 
- //can avoid showing the test drinks in the results altogether. As soon as I give
- //them dummyIds they start being part of the search results
-//keywords: drinkName, test DrinkName
+/*How do I prevent test drinks from showing up to the frontend user?
+By the two testdrinks not having a dummyid, I 
+can avoid showing the test drinks in the results altogether. As soon as I give
+them dummyIds they start being part of the search results*/
+
 const drinks = [
   {
     name: "drinkName",
