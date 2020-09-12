@@ -8,8 +8,9 @@ const DrinkPreview = ({ drink }) => {
   const history = useHistory()
 
   const toDrinkPage = () => { // i used this instead of <a> tag because I realised too late to refactor
-    history.push(`/drink/${drink.dummyId}`)
+    history.push(`/drink/${drink.id}`)
   }
+  console.log(drink.name)
 
   return (
     <div className="drink-preview" data-testid="drink-preview"  onClick={toDrinkPage}>

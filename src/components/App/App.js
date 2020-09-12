@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import { Navbar } from '../Navbar/Navbar'
 import { SearchBar } from '../SearchBar/SearchBar'
@@ -13,8 +13,21 @@ import Recipe from '../Recipe/Recipe'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 import { WarningPrompt, NotFound } from '../HelperComponents/HelperComponents'
+import axios from 'axios'
+import DrinkPreview from '../DrinkPreview/DrinkPreview'
+import drinkService from '../../services/drinkService'
 
 function App () {
+ //const [drinks, setDrinks] = useState([])
+const [drinks1, setDrinks1] = useState([1])
+
+const fetchDrinksHook = () => {
+  console.log('effect, fetchDrinksHook')
+  drinkService.getAllDrinks().then(allDrinks => setDrinks1(allDrinks))
+  
+}
+useEffect(fetchDrinksHook, [])
+
   // <Recipe drink={featured[22]} />
   /* all drinks should be separate from searchResults because featured takes from all drinks and search results are search results. */
   /*What is happening here: test drinks dont have dummyId so we do the filter to eliminate them from the search results */
@@ -24,7 +37,12 @@ function App () {
   const featured = drinks.filter(d =>d.hasOwnProperty('dummyId'))
   // const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
   
-  
+
+  //console.log('render', drinks.length, 'drinks')
+
+  console.log('render', drinks1.length, 'drinks')
+  console.log(drinks1.length)
+
   return (
     <div className="App" data-testid="app">
       <div className="app-container">
@@ -36,7 +54,7 @@ function App () {
               <Contact />
             </Route>
             <Route path="/drink/:id" >
-              <Recipe drinks = {drinks}/>
+              <Recipe drinks = {drinks1.length >1 && drinks1}/>
             </Route>
 
             <Route path="/about">
@@ -53,7 +71,7 @@ function App () {
 
               {/* FeaturedDrinks should disapear when there are search results available
 i.e only show featured when search results are empty */
-                searchRes.length < 1 ? <FeaturedDrinks allDrinks={featured} /> : <SearchResults results={searchRes} />
+                searchRes.length < 1 ? (drinks1.length > 1 && <FeaturedDrinks allDrinks={drinks1} />): <SearchResults results={searchRes} />
               }
             </Route>
             <Route><NotFound /></Route>
@@ -75,6 +93,8 @@ i.e only show featured when search results are empty */
     //-----try using refs to on searchBar to get acces to query and use that to know if its 0 res or just hasnt searched at all yet
   } */
 }
+
+//<FeaturedDrinks allDrinks={featured} />    {console.log(drinks1)}
 /* {
   //alternatively we could display featured anyways under
   // searchResults when searchResults are less than a certain amount
