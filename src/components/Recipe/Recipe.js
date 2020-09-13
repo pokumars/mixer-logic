@@ -2,21 +2,23 @@
 import React, { useEffect, useState } from 'react'
 import { capitalise, joinWithAnd } from '../../util/helperFunctions'
 import { useParams } from 'react-router-dom'
-// import { drinks }  from '../../allDrinks'
 import './Recipe.css'
 import drinkService from '../../services/drinkService'
 
-const Recipe = ({ drinks }) => {
+const Recipe = () => {
   const [drink, setDrink] = useState(null)
   // TODO: fix the condition to render the recipe/image credits
   const drinkId = useParams().id
-  
-  useEffect(() => {
-   drinkService.getSingleDrink(drinkId).then(d =>{
-     console.log(d)
-    setDrink(d)
-   })
-  }, []) 
+
+  const fetchSingleDrink = () => {
+    //console.log('effect in recipe')
+    drinkService.getSingleDrink(drinkId).then(theDrink =>{
+      console.log(theDrink)
+     setDrink(theDrink)
+    })
+  }
+
+  useEffect(fetchSingleDrink, []) 
 
   const renderRecipe = () => {
     return(<>
@@ -70,6 +72,7 @@ const Recipe = ({ drinks }) => {
       // <a ><b>+ Add to Favorites</b></a>
       }
       {
+        //TODO: P2 a loading thing
        drink !== null ? renderRecipe() : <h1>Loading recipe</h1>
       }
       

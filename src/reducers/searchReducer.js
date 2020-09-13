@@ -1,4 +1,5 @@
 import { drinks } from '../allDrinks'
+import drinkService from '../services/drinkService'
 
 // search reducer sets the search criteria and
 // then drinks reducer does the search
@@ -13,8 +14,8 @@ export const initialState ={ res: [], empty: '' }
 const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case FIND_BY_NAME:
-      const drinksFoundByName = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(action.query.toLowerCase()) !== -1)
-      return { res: drinksFoundByName, empty: emptyResultsText(drinksFoundByName) }
+      console.log(action)
+      return { res: action.drinksFoundByName, empty: emptyResultsText(action.drinksFoundByName) }
 
     case FIND_BY_METHOD:
       // searches for full text && also search for partial text match
@@ -35,11 +36,20 @@ const searchReducer = (state = initialState, action) => {
 
 // ---------------------ACTION CREATORS-----------------
 export const findDrinksByName = (searchText) => {
-  return {
-    type: FIND_BY_NAME,
-    query: searchText
+  return async dispatch =>{
+    const drinks = await drinkService.getAllDrinks()
+    console.log(drinks.length, 'drinks found in thunk')
+
+    const drinksFoundByName = drinks.filter(currDrink => currDrink.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1)
+    console.log(drinksFoundByName.length, 'drinksFoundByName in thunk')
+
+    dispatch({
+      type: FIND_BY_NAME,
+      drinksFoundByName: drinksFoundByName
+    })
   }
 }
+
 
 export const findDrinksByMethod = (searchText) => {
   //console.log('finding by method')

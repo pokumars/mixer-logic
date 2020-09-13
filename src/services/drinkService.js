@@ -5,7 +5,7 @@ const getAllDrinks = () => {
   const request = axios.get(`${baseURL}`)
 
   return request.then((response) => {
-    console.log('axios fetch of drinks fulfilled')
+    console.log('axios fetch of drinks fulfilled.', response.data.length, 'drinks found')
     return response.data
   })
 }
