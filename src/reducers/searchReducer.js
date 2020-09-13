@@ -1,4 +1,3 @@
-import { drinks } from '../allDrinks'
 import drinkService from '../services/drinkService'
 
 // search reducer sets the search criteria and
@@ -22,10 +21,8 @@ const searchReducer = (state = initialState, action) => {
       return { res: action.drinksFoundByMethod, empty: emptyResultsText(action.drinksFoundByMethod) }
 
     case FIND_BY_ALCOHOL:
-      // searches for full text && also search for partial text match
-      const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, action.query)
-      //console.log(action.query)
-      return { res: drinksFoundByAlcohol, empty: emptyResultsText(drinksFoundByAlcohol) }
+      console.log(action)
+      return { res: action.drinksFoundByAlcohol, empty: emptyResultsText(action.drinksFoundByAlcohol) }
   
     default:
       return state
@@ -51,10 +48,7 @@ export const findDrinksByName = (searchText) => {
 
 
 export const findDrinksByMethod = (searchText) => {
-  
-  //console.log('finding by method')
-
-  //return a function to the reducer
+  //returns a function to the reducer
   return async (dispatch) => {
     const drinks = await drinkService.getAllDrinks()
     console.log(drinks.length, 'drinks found in thunk')
@@ -72,9 +66,18 @@ export const findDrinksByMethod = (searchText) => {
 
 export const findDrinksByAlcohol = (searchText) => {
   //console.log('finding by alcohol')
-  return {
-    type: FIND_BY_ALCOHOL,
-    query: searchText
+  return async (dispatch) => {
+    const drinks = await drinkService.getAllDrinks()
+    console.log(drinks.length, 'drinks found in thunk')
+
+    // searches for full text match && also search for partial text match
+    const drinksFoundByAlcohol = deepSearch(drinks, FIND_BY_ALCOHOL, searchText)
+    console.log(drinksFoundByAlcohol.length, 'drinksFoundByAlcohol in thunk')
+
+    dispatch({
+      type: FIND_BY_ALCOHOL,
+      drinksFoundByAlcohol: drinksFoundByAlcohol
+    })
   }
 }
 

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import SearchResults from '../SearchResults/SearchResults'
 import FeaturedDrinks from '../FeaturedDrinks/FeaturedDrinks'
 import { Footer } from '../Footer/Footer'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useParams, Redirect } from 'react-router-dom'
 import Recipe from '../Recipe/Recipe'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
@@ -29,6 +29,7 @@ useEffect(fetchDrinksHook, [])
   /*What is happening here: test drinks dont have dummyId so we do the filter to eliminate them from the search results */
   const searchRes = useSelector(state => state.searchResults.res)
   const noResultsString = useSelector(state => state.searchResults.empty)
+  
 
   // const findDrinkById = (id) =>drinks.find(d => d.dummyId === id)
   
@@ -37,6 +38,8 @@ useEffect(fetchDrinksHook, [])
 
   console.log('render', drinks1.length, 'drinks')
   console.log(drinks1.length)
+
+  //TODO: P2 redirect to a  404 page when drinkid is undefined or NaN
 
   return (
     <div className="App" data-testid="app">
@@ -49,13 +52,14 @@ useEffect(fetchDrinksHook, [])
               <Contact />
             </Route>
             <Route path="/drink/:id" >
-              <Recipe drinks = {drinks1.length >1 && drinks1}/>
+              <Recipe drinks = {drinks1.length >1 && drinks1}/>              
             </Route>
 
             <Route path="/about">
               <WarningPrompt />
               <About/>
             </Route>
+            
             <Route exact path="/">
               <WarningPrompt />
               <SearchBar />
@@ -69,6 +73,7 @@ i.e only show featured when search results are empty */
                 searchRes.length < 1 ? (drinks1.length > 1 && <FeaturedDrinks allDrinks={drinks1} />): <SearchResults results={searchRes} />
               }
             </Route>
+            
             <Route><NotFound /></Route>
 
           </Switch>

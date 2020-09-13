@@ -8,10 +8,12 @@ import drinkService from '../../services/drinkService'
 const Recipe = () => {
   const [drink, setDrink] = useState(null)
   // TODO: fix the condition to render the recipe/image credits
-  const drinkId = useParams().id
+  //console.log(useParams().id)
+  const drinkId = Number(useParams().id)
+  console.log(typeof drinkId, drinkId);
 
   const fetchSingleDrink = () => {
-    //console.log('effect in recipe')
+    console.log('effect in recipe'); console.log('drinkid of', drinkId)
     drinkService.getSingleDrink(drinkId).then(theDrink =>{
       console.log(theDrink)
      setDrink(theDrink)
@@ -73,7 +75,7 @@ const Recipe = () => {
       }
       {
         //TODO: P2 a loading thing
-       drink !== null ? renderRecipe() : <h1>Loading recipe</h1>
+        drink !== null ? renderRecipe() : <h1>Loading recipe</h1>
       }
       
     </div>
