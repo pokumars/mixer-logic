@@ -19,7 +19,7 @@ const DrinkPreview = ({ drink }) => {
           <p><b>Ingredients</b></p>
         </div>
         <img alt={drink.name} className="drink-image"
-          src={require(`../../graphics/drinkImages/${drink.imageUrl}`)} />
+          src={drink.imageUrl} />
       </div>
       <div className="bottom-half">
         <p>{drink.ingredients.map(ing => capitalise(ing[0])).join(', ')}</p>

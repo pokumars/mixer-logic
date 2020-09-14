@@ -27,8 +27,8 @@ const Recipe = () => {
       <div className="recipe-top">
       <div className="top-right">
         <img alt={drink.name}
-          src={require(`../../graphics/drinkImages/${drink.imageUrl}`)} />
-        <span className="credits">{drink.credits.length !== 0 ? `${drink.credits[0][1]} from ${drink.credits[0][0]}` : ''}</span> <br />
+          src={drink.imageUrl} />
+        <span className="credits">{drink.credits[0].length > 0 ? `${drink.credits[0][1]} from ${drink.credits[0][0]}` : ''}</span> <br />
 
       </div>
       <div className="top-left">
@@ -53,7 +53,7 @@ const Recipe = () => {
         <ol>
           {drink.steps.map((step) => <li key={step}>{step}</li>)}
         </ol>
-        <span className="credits">{drink.credits.length !== 0 ? `${drink.credits[1][1]} from ${drink.credits[1][0]}` : ''}</span>
+        <span className="credits">{drink.credits[1].length > 0 ? `${drink.credits[1][1]} from ${drink.credits[1][0]}` : ''}</span>
 
       </div>
       <div className="bottom-right">
