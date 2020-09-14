@@ -6,7 +6,6 @@ import thunk from 'redux-thunk'
 export const reducer = combineReducers({
   searchResults: searchReducer
 })
-const middlewares = []
 const store = createStore(
   reducer,
   composeWithDevTools(

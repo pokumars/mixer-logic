@@ -15,7 +15,7 @@
           "dash"
         ]
       ],
-      "imageUrl": "vodkaMartini.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/vodkaMartini.jpg",
       "glass": "cocktail",
       "method": [
         "stir"
@@ -89,7 +89,7 @@
           "dashes"
         ]
       ],
-      "imageUrl": "bloodyMaryCocktail.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/bloodyMaryCocktail.jpg",
       "glass": "On The Rocks",
       "method": [
         "stir"
@@ -154,7 +154,7 @@
           null
         ]
       ],
-      "imageUrl": "spicyMule.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/spicyMule.jpg",
       "glass": "highball",
       "method": [
         "muddle",
@@ -214,7 +214,7 @@
           null
         ]
       ],
-      "imageUrl": "mangoBreeze.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/mangoBreeze.jpg",
       "glass": "highball",
       "method": [
         "build"
@@ -286,7 +286,7 @@
           null
         ]
       ],
-      "imageUrl": "miniMary.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/miniMary.jpg",
       "glass": "shot",
       "method": [
         "shake"
@@ -345,7 +345,7 @@
           "slice"
         ]
       ],
-      "imageUrl": "miniSeaBreeze.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/miniSeaBreeze.jpg",
       "glass": "shot",
       "method": [
         "build"
@@ -413,7 +413,7 @@
           null
         ]
       ],
-      "imageUrl": "cinnamini.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/cinnamini.jpg",
       "glass": "shot",
       "method": [
         "shake"
@@ -472,7 +472,7 @@
           null
         ]
       ],
-      "imageUrl": "caipiroska.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/caipiroska.jpg",
       "glass": "on the rocks",
       "method": [
         "muddle",
@@ -541,7 +541,7 @@
           null
         ]
       ],
-      "imageUrl": "orientalCaipiroska.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/orientalCaipiroska.jpg",
       "glass": "on the rocks",
       "method": [
         "muddle",
@@ -606,7 +606,7 @@
           null
         ]
       ],
-      "imageUrl": "grapefruitCaipiroska.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/grapefruitCaipiroska.jpg",
       "glass": "on the rocks",
       "method": [
         "muddle",
@@ -660,7 +660,7 @@
           "cl"
         ]
       ],
-      "imageUrl": "espressoMartini.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/espressoMartini.jpg",
       "glass": "cocktail",
       "method": [
         "shake"
@@ -718,7 +718,7 @@
           null
         ]
       ],
-      "imageUrl": "archipelago.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/archipelago.jpg",
       "glass": "highball",
       "method": [
         "build"
@@ -791,7 +791,7 @@
           null
         ]
       ],
-      "imageUrl": "tropicalTouch.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/tropicalTouch.jpg",
       "glass": "cocktail or coupe",
       "method": [
         "stir"
@@ -855,7 +855,7 @@
           null
         ]
       ],
-      "imageUrl": "coconutCrush.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/coconutCrush.jpg",
       "glass": "hihgball",
       "method": [
         "shake",
@@ -924,7 +924,7 @@
           null
         ]
       ],
-      "imageUrl": "tropicalCaipiroska.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/tropicalCaipiroska.jpg",
       "glass": "on the rocks",
       "method": [
         "muddle",
@@ -979,7 +979,7 @@
           null
         ]
       ],
-      "imageUrl": "ginAndTonic.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/ginAndTonic.jpg",
       "glass": "highball",
       "method": [
         "build"
@@ -1035,7 +1035,7 @@
           null
         ]
       ],
-      "imageUrl": "limeCola.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/limeCola.jpg",
       "glass": "cocktail or highball",
       "method": [
         "build"
@@ -1101,7 +1101,7 @@
           null
         ]
       ],
-      "imageUrl": "applePie.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/applePie.jpg",
       "glass": "shot",
       "method": [
         "stir",
@@ -1165,7 +1165,7 @@
           null
         ]
       ],
-      "imageUrl": "spicyMango.jpg",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/spicyMango.jpg",
       "glass": "shot",
       "method": [
         "shake"
@@ -1223,7 +1223,7 @@
           null
         ]
       ],
-      "imageUrl": "cubaLibre.png",
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/cubaLibre.png",
       "glass": "highball",
       "method": [
         "build",
@@ -1258,6 +1258,611 @@
         "Pour in the rum then fill up with cola and stir gently. "
       ],
       "id": 20
+    },
+    {
+      "name": "Pina Colada",
+      "ingredients": [
+        [
+          "pineapple juice",
+          12,
+          "cl"
+        ],
+        [
+          "white rum",
+          6,
+          "cl"
+        ],
+        [
+          "coconut cream or coconut milk",
+          6,
+          "cl"
+        ],
+        [
+          "pineapple wedge",
+          null,
+          null
+        ],
+        [
+          "ice",
+          null,
+          null
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/pinaColada.jpg",
+      "glass": "highball",
+      "method": [
+        "blend"
+      ],
+      "garnish": [
+        "pineapple wedge"
+      ],
+      "categories": [
+        "cocktail",
+        "tropical",
+        "classic"
+      ],
+      "alcohols": [
+        "white rum"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "BBC goodfood",
+          "image"
+        ],
+        [
+          "maliburumdrinks.com",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "Put all the ingredients in a container,",
+        "Shake or blend until smooth.",
+        "Pour into a tall (highball) glass and garnish with a pineapple wedge."
+      ],
+      "id": 21
+    },
+    {
+      "name": "Long Island Iced Tea",
+      "ingredients": [
+        [
+          "vodka",
+          15,
+          "ml"
+        ],
+        [
+          "tequila",
+          15,
+          "ml"
+        ],
+        [
+          "white rum",
+          15,
+          "ml"
+        ],
+        [
+          "gin",
+          15,
+          "ml"
+        ],
+        [
+          "cointreau",
+          15,
+          "ml"
+        ],
+        [
+          "lemon juice",
+          25,
+          "ml"
+        ],
+        [
+          "simple syrup(1 part sugar mixed with 1 part hot water)",
+          15,
+          "ml"
+        ],
+        [
+          "coke",
+          null,
+          null
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/longIslandIcedTea.jpg",
+      "glass": "highball",
+      "method": [
+        "stir"
+      ],
+      "garnish": [
+        "lemon slice"
+      ],
+      "categories": [
+        "cocktail",
+        "classic"
+      ],
+      "alcohols": [
+        "vodka",
+        "tequila",
+        "white rum",
+        "gin",
+        "cointreau"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "BBC goodfood",
+          "image"
+        ],
+        [
+          "International Bartender Association",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "Add all ingredients into highball glass filled with ice.",
+        "Stir gently.",
+        "Optionally garnish with lemon slices"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Mojito",
+      "ingredients": [
+        [
+          "white rum",
+          5,
+          "cl"
+        ],
+        [
+          "fresh lime juice",
+          2,
+          "cl"
+        ],
+        [
+          "sugar",
+          2,
+          "tsp"
+        ],
+        [
+          "soda water",
+          null,
+          null
+        ],
+        [
+          "mint leaves",
+          6,
+          null
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/mojito.jpg",
+      "glass": "highball",
+      "method": [
+        "muddle",
+        "shake"
+      ],
+      "garnish": [
+        "mint leaf",
+        "lime wheel"
+      ],
+      "categories": [
+        "classic",
+        "cocktail"
+      ],
+      "alcohols": [
+        "white rum"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "liquor.com",
+          "image"
+        ],
+        [
+          "International Bartender Association",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "Mix mint leaves with sugar and lime juice.",
+        "Add a splash of soda water and fill the glass with ice.",
+        "Pour the rum and top with soda water. ",
+        "Lightly stir to involve all ingredients."
+      ],
+      "id": 23
+    },
+    {
+      "name": "Daiquiri",
+      "ingredients": [
+        [
+          "white rum",
+          6,
+          "cl"
+        ],
+        [
+          "lime juice",
+          2,
+          "cl"
+        ],
+        [
+          "sugar",
+          2,
+          "tsp"
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/daiquiri.jpg",
+      "glass": "cocktail",
+      "method": [
+        "stir",
+        "shake"
+      ],
+      "garnish": [
+        "lime wheel",
+        "nothing"
+      ],
+      "categories": [
+        "cocktail",
+        "classic"
+      ],
+      "alcohols": [
+        "white rum"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "BBC goodfood",
+          "image"
+        ],
+        [
+          "International Bartenders Association",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "In a cocktail shaker (or whatever you have) add all ingredients.",
+        "Stir well to dissolve the sugar.",
+        "Add ice and shake. ",
+        "Strain into a chilled cocktail glass."
+      ],
+      "id": 24
+    },
+    {
+      "name": "Hemingway Special",
+      "ingredients": [
+        [
+          "rum (12 parts)",
+          6,
+          "cl"
+        ],
+        [
+          "grapefruit juice (8 parts) ",
+          4,
+          "cl"
+        ],
+        [
+          "maraschino liqueur (3 parts)",
+          1.5,
+          "cl"
+        ],
+        [
+          "lime juice (3 parts) ",
+          1.5,
+          "cl"
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/hemingwaySpecial.jpg",
+      "glass": "cocktail",
+      "method": [
+        "shake"
+      ],
+      "garnish": [
+        "lime wedge"
+      ],
+      "categories": [
+        "cocktail",
+        "classic"
+      ],
+      "alcohols": [
+        "maraschino liqueur",
+        "rum"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "thespruceeats.com",
+          "image"
+        ],
+        [
+          "International Bartender Association",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "Pour all ingredients into a shaker (or whatever you have) with ice.",
+        "Shake well and strain into a large cocktail glass."
+      ],
+      "id": 25
+    },
+    {
+      "name": "Margarita",
+      "ingredients": [
+        [
+          "lime wedge",
+          1,
+          null
+        ],
+        [
+          "tequila",
+          5,
+          "cl"
+        ],
+        [
+          "triple sec",
+          2,
+          "cl"
+        ],
+        [
+          "lime juice",
+          15,
+          "ml"
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/margarita.jpg",
+      "glass": "cocktail",
+      "method": [
+        "shake"
+      ],
+      "garnish": [
+        "salted rim"
+      ],
+      "categories": [
+        "classic",
+        "cocktail"
+      ],
+      "alcohols": [
+        "tequila",
+        "triple sec"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "liquor.com",
+          "image"
+        ],
+        []
+      ],
+      "steps": [
+        "Chill your cocktail glass.",
+        "Place salt on a small shallow plate.",
+        "Rub the rim of the cocktail glass with a lime wedge, then dip in salt to coat rim.",
+        "Add all the ingredients into a shaker (or whatever you have) with ice.",
+        "Shake and strain into the chilled cocktail glass."
+      ],
+      "id": 26
+    },
+    {
+      "name": "Sex On The Beach",
+      "ingredients": [
+        [
+          "vodka",
+          4,
+          "cl"
+        ],
+        [
+          "peach schnapps",
+          2,
+          "cl"
+        ],
+        [
+          "cranberry juice",
+          4,
+          "cl"
+        ],
+        [
+          "fresh orange juice",
+          4,
+          "cl"
+        ],
+        [
+          "maraschino cherry (optional)",
+          1,
+          null
+        ],
+        [
+          "orange slice (optional)",
+          1,
+          null
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/sexOnTheBeach.jpg",
+      "glass": "highball",
+      "method": [
+        "shake"
+      ],
+      "garnish": [
+        "orange slice ",
+        "maraschino cherry",
+        "cocktail umbrella"
+      ],
+      "categories": [
+        "cocktail",
+        "classic"
+      ],
+      "alcohols": [
+        "vodka",
+        "peach schnapps"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "BBC goodfood",
+          "image"
+        ],
+        [
+          "liquor.com",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "Add all the ingredients into a shaker (or whatever you have) with ice and shake.",
+        "Strain into a highball glass over fresh ice.",
+        "garnish with a maraschino cherry or orange slice or cocktail umbrella."
+      ],
+      "id": 27
+    },
+    {
+      "name": "Mimosa",
+      "ingredients": [
+        [
+          "orange juice",
+          7,
+          "cl"
+        ],
+        [
+          "sparkling wine",
+          7,
+          "cl"
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/mimosa.jpg",
+      "glass": "champagne flute",
+      "method": [
+        "stir"
+      ],
+      "garnish": [
+        "orange wedge"
+      ],
+      "categories": [
+        "cocktail",
+        "classic"
+      ],
+      "alcohols": [
+        "sparkling wine"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "liquor.com",
+          "image"
+        ],
+        []
+      ],
+      "steps": [
+        "Pour orange juice into a flute glass.",
+        "Gently pour the sparkling wine.",
+        "Stir gently."
+      ],
+      "id": 28
+    },
+    {
+      "name": "Black Russian",
+      "ingredients": [
+        [
+          "vodka",
+          5,
+          "cl"
+        ],
+        [
+          "coffee liqueur",
+          2,
+          "cl"
+        ],
+        [
+          "maraschino cherry",
+          1,
+          null
+        ],
+        [
+          "cola (optional)",
+          null,
+          null
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/blackRussian.jpg",
+      "glass": "On The Rocks",
+      "method": [
+        "build",
+        "stir"
+      ],
+      "garnish": [
+        "maraschino cherry"
+      ],
+      "categories": [
+        "cocktail"
+      ],
+      "alcohols": [
+        "vodka",
+        "coffee liqueur"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "thespruceeats.com",
+          "image"
+        ],
+        [
+          "BBC goodfood",
+          "recipe"
+        ]
+      ],
+      "steps": [
+        "Put the vodka and the coffee liqueur into a glass filled with ice.",
+        "Stir gently for about 30 secs.",
+        "Add the cherry and serve. ",
+        "Optionally top up the glass with chilled cola if you prefer a longer drink."
+      ],
+      "id": 29
+    },
+    {
+      "name": "White Russian",
+      "ingredients": [
+        [
+          "vodka",
+          5,
+          "cl"
+        ],
+        [
+          "coffee liqueur",
+          2,
+          "cl"
+        ],
+        [
+          "fresh cream (or milk)",
+          3,
+          "cl"
+        ],
+        [
+          "ice",
+          null,
+          null
+        ]
+      ],
+      "imageUrl": "https://mixer-logic-p2images.s3.eu-central-1.amazonaws.com/whiteRussian.jpg",
+      "glass": "On The Rocks",
+      "method": [
+        "build",
+        "stir"
+      ],
+      "garnish": [
+        null
+      ],
+      "categories": [
+        "cocktail"
+      ],
+      "alcohols": [
+        "vodka",
+        "coffee liqueur"
+      ],
+      "page": null,
+      "credits": [
+        [
+          "liquor.com",
+          "image"
+        ],
+        []
+      ],
+      "steps": [
+        "Add the vodka and coffee liqueur to a glass with ice.",
+        "Top with cream and stir."
+      ],
+      "id": 30
     }
   ]
 }
