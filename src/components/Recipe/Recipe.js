@@ -10,7 +10,7 @@ const Recipe = () => {
   // TODO: fix the condition to render the recipe/image credits
   //console.log(useParams().id)
   //const drinkId = Number(useParams().id)
-  console.log(useParams().id)
+  
   const drinkId = useParams().id
   console.log(typeof drinkId, drinkId);
 
@@ -27,6 +27,7 @@ const Recipe = () => {
       if (error.response) {
         // The request was made and the server responded with a status code
         // that falls out of the range of 2xx
+        console.trace();
         to404();
         console.log('error status of drink fetch',error.response.status);
         //console.log(error.response.data);
