@@ -8,7 +8,7 @@ const DrinkPreview = ({ drink }) => {
   const history = useHistory()
 
   const toDrinkPage = () => { // i used this instead of <a> tag because I realised too late to refactor
-    history.push(`/drink/${drink.id}`)
+    history.push(`/drink/${drink._id}`)
   }
 
   return (

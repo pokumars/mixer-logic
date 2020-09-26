@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react'
 import { capitalise, joinWithAnd } from '../../util/helperFunctions'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import './Recipe.css'
 import drinkService from '../../services/drinkService'
 
@@ -9,12 +9,31 @@ const Recipe = () => {
   const [drink, setDrink] = useState(null)
   // TODO: fix the condition to render the recipe/image credits
   //console.log(useParams().id)
-  const drinkId = Number(useParams().id)
+  //const drinkId = Number(useParams().id)
+  console.log(useParams().id)
+  const drinkId = useParams().id
   console.log(typeof drinkId, drinkId);
+
+  const history = useHistory()
+
+  const to404 = () => { // i used this instead of <a> tag because I realised too late to refactor
+    history.push(`/404`)
+  }
 
   const fetchSingleDrink = () => {
     console.log('effect in recipe'); console.log('drinkid of', drinkId)
-    drinkService.getSingleDrink(drinkId).then(theDrink =>{
+    drinkService.getSingleDrink(drinkId)
+    .catch(error => {
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        to404();
+        console.log('error status of drink fetch',error.response.status);
+        //console.log(error.response.data);
+        console.log(error.response.status);
+        //console.log(error.response.headers);
+      }
+    }).then(theDrink =>{
       console.log(theDrink)
      setDrink(theDrink)
     })
