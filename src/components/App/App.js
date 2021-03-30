@@ -12,6 +12,7 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 import { WarningPrompt, NotFound } from '../HelperComponents/HelperComponents'
 import drinkService from '../../services/drinkService'
+import PasswordReset from '../PasswordReset/PasswordReset'
 
 function App () {
  //const [drinks, setDrinks] = useState([])
@@ -58,6 +59,9 @@ useEffect(fetchDrinksHook, [])
             <Route path="/about">
               <WarningPrompt />
               <About/>
+            </Route>
+            <Route path="/reset-password">
+              <PasswordReset />
             </Route>
             
             <Route exact path="/">
