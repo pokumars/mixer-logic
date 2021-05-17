@@ -15,6 +15,9 @@ const Contact = () => {
           <strong>GitHub</strong>
         </a>
       </div>
+      {      
+      //cv has too much of my personal info TODO: fix and put a more private cv
+      /*
       <div className="my-email contact-element">
         <img alt="cv" src={require('../../graphics/icons/email-icon.svg')}/>
         <p>Shoot me some feedback @ ohenebakob@yahoo.com</p>
@@ -25,6 +28,7 @@ const Contact = () => {
           curriculum vitae
         </a></p>
       </div>
+      */}
 
     </div>
   )
